@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --navBlue: #0f1524;
+  --white: rgb(255, 255, 255);
+  --black: black;
+  --bodyBlue: #01111e;
+  --border: rgb(42, 45, 51);
+}
+body{
+  margin: 0;
+  background-color: var(--bodyBlue);
+  overflow-x: hidden;
+}

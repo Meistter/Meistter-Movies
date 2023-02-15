@@ -1,0 +1,15 @@
+footer{
+    text-align: center;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--navBlue);
+    color: white;
+}
+footer a{
+ color: rgb(233, 205, 49);
+}
