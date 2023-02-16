@@ -7,8 +7,6 @@ import { Movie } from 'src/app/models/movie';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent {
-  imgUrl = environment.IMG_BASE
-
   @Input() movie: Movie = {
   adult: false,
   backdrop_path: '',
@@ -19,14 +17,17 @@ export class PeliculaComponent {
   original_title: '',
   overview: '',
   popularity: 0,
-  poster_path: '/5DNRr2juXdwtvktwXxwuk9Usk8O.jpg',
+  poster_path: '',
   release_date: '',
   title: '',
   video: false,
   vote_average: 0,
   vote_count: 0
   } //estado inicial
-  finalImgUrl = this.imgUrl + this.movie.poster_path
+
+
+  imgUrl = environment.IMG_BASE
+
 
 
 
