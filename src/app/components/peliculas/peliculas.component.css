@@ -11,3 +11,8 @@
 .main-movies-header button{
   margin-right: 80px;
 }
+.main-moviesList{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}

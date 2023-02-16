@@ -3,8 +3,11 @@
     <h2 class="main-movies-title">Top Peliculas Trending del Mes</h2>
     <button class="main-movies-btn">Ver más</button>
   </div>
-
+  <div>
+    <article class="main-moviesList">
         <!-- Aqui agregamos las peliculas dinámicamente -->
-        <app-pelicula [movie]="movie" *ngFor="let movie of movies"></app-pelicula>
-      <!-- </article> -->
+  <app-pelicula [movie]="movie" *ngFor="let movie of datos.results"></app-pelicula>
+
+  </article>
+  </div>
 </div>

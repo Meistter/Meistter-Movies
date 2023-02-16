@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/enviroments/enviroments';
+import { Datos } from '../models/movie';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class PeliculasService {
   private API = `${environment.API}/trending/movie/day`
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getTrendingMovies(){
-    return this.httpClient.get(this.API, {params: {language : 'es'}})
+     this.http.get<Datos>(this.API, {params: {language : 'es'}})
 
   }
 
