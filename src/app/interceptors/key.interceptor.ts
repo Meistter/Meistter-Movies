@@ -19,9 +19,9 @@ export class KeyInterceptor implements HttpInterceptor {
   }
 
   private addApiKey(request: HttpRequest<unknown>){
-
+    const idioma = window.navigator.language
     const key = environment.API_KEY //mi api key.
-    return request.clone({params: request.params.set('api_key', key)}) //retornno la solicitud original modificada
-
+    return request.clone({setParams: {api_key: key, language: idioma}}) //retornno la solicitud original modificada
+    //le estamos asignando de parametros el api-key y el lenguaje del explorador
   }
 }

@@ -5,10 +5,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     bottom: 0;
     background-color: var(--navBlue);
     color: white;
+    margin-top: 20px;
+
 }
 footer a{
  color: rgb(233, 205, 49);

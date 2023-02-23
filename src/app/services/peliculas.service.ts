@@ -11,7 +11,7 @@ export class PeliculasService {
   constructor(private http: HttpClient) { }
 
   getTrendingMovies(){
-    return this.http.get<Datos>(this.API, {params: {language : 'es'}})
+    return this.http.get<Datos>(this.API)
 
   }
 

@@ -12,7 +12,7 @@ export class SeriesService {
   constructor(private http: HttpClient) { }
 
   getTrendingSeries(){
-    return this.http.get<Datos>(this.API, {params: {language : 'es'}})
+    return this.http.get<Datos>(this.API)
 
   }
 

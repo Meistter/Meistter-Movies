@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { Datos } from 'src/app/models/movie';
-import { SeriesService } from 'src/app/services/series.service.ts.service';
+import { SeriesService } from 'src/app/services/series.service';
 @Component({
   selector: 'app-peliculas',
   templateUrl: './peliculas.component.html',
