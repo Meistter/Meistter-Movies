@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { PeliculasService } from '../services/peliculas.service';
 import { environment } from 'src/enviroments/enviroments';
 import {
   HttpRequest,
@@ -12,7 +11,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class KeyInterceptor implements HttpInterceptor {
 
-  constructor(private peliculasService: PeliculasService) {}
+  constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     request = this.addApiKey(request)

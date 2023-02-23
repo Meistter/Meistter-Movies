@@ -8,13 +8,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { KeyInterceptor } from './interceptors/key.interceptor';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import { SerieComponent } from './components/serie/serie.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     PeliculasComponent,
-    PeliculaComponent
+    PeliculaComponent,
+    SerieComponent
   ],
   imports: [
     BrowserModule,

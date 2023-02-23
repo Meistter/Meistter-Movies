@@ -1,13 +1,26 @@
-<div class="main-movies-container">
-  <div class="main-movies-header">
-    <h2 class="main-movies-title">Top Peliculas Trending del Mes</h2>
-    <button class="main-movies-btn">Ver más</button>
-  </div>
-  <div>
-    <article class="main-moviesList">
-        <!-- Aqui agregamos las peliculas dinámicamente -->
-  <app-pelicula [movie]="movie" *ngFor="let movie of datos.results"></app-pelicula>
+<div>
+      <div #contenedorPeliculas>
+            <div class="main-movies-header">
+              <h2 class="main-movies-title">Top Peliculas Trending del Mes</h2>
+              <button class="main-movies-btn">Ver más</button>
+            </div>
 
-  </article>
-  </div>
+            <article class="main-moviesList">
+                  <!-- Aqui agregamos las peliculas dinámicamente -->
+            <app-pelicula [movie]="movie" *ngFor="let movie of datos.results"></app-pelicula>
+            </article>
+            </div>
+
+      <div #contenedorSeries>
+            <div class="main-movies-header">
+              <h2 class="main-movies-title">Top Peliculas Trending del Mes</h2>
+              <button class="main-movies-btn">Ver más</button>
+            </div>
+
+
+            <article class="main-moviesList">
+            <app-serie [serie]="serie" *ngFor="let serie of datosSeries.results"></app-serie>
+            </article>
+
+      </div>
 </div>
