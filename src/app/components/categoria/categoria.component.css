@@ -1,3 +1,9 @@
 .box{
   color: white;
+  border: solid;
+  border-radius: 8px;
+  border-color: var(--navBlue);
+  padding: 8px;
+  font-family: Domine;
 }
+

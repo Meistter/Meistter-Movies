@@ -1,8 +1,8 @@
-<div>
+<div #contenedor>
       <div #contenedorPeliculas>
             <div class="main-movies-header">
               <h2 class="main-movies-title">Top Peliculas Trending del Mes</h2>
-              <button class="main-movies-btn">Ver más</button>
+              <!-- <button class="main-movies-btn">Ver más</button> -->
             </div>
 
             <article class="main-moviesList">
@@ -11,16 +11,16 @@
             </article>
             </div>
 
-      <div #contenedorSeries>
-            <div class="main-movies-header">
-              <h2 class="main-movies-title">Top Series Trending del Mes</h2>
-              <button class="main-movies-btn">Ver más</button>
-            </div>
+            <div #contenedorSeries>
+              <div class="main-movies-header">
+                <h2 class="main-movies-title">Top Series Trending del Mes</h2>
+                <!-- <button class="main-movies-btn">Ver más</button> -->
+              </div>
 
 
-            <article class="main-moviesList">
-            <app-serie [serie]="serie" *ngFor="let serie of datosSeries.results"></app-serie>
-            </article>
+              <article class="main-moviesList">
+              <app-serie [serie]="serie" *ngFor="let serie of datosSeries.results"></app-serie>
+              </article>
 
-      </div>
+        </div>
 </div>
