@@ -3,5 +3,7 @@
 </div>
 
 <div class="mainContainer">
-<app-pelicula></app-pelicula>
+<app-pelicula [movie]="movie" *ngFor="let movie of resultados" ></app-pelicula>
+
 </div>
+<button (click)="loadMore()">Cargar Más</button>

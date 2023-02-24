@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./series-main.component.css']
 })
 export class SeriesMainComponent {
-
+  //View Encapsulation
 }
