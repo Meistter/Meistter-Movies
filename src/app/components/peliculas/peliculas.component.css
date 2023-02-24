@@ -16,4 +16,6 @@
   align-items: center;
   margin: 20px;
 }
-
+.main-movies-btn{
+  cursor: pointer;
+}

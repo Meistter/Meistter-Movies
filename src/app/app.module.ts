@@ -11,6 +11,9 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { SerieComponent } from './components/serie/serie.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MoviesComponent } from './pages/movies/movies.component';
+import { SeriesComponent } from './pages/series/series.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
     PeliculaComponent,
     SerieComponent,
     CategoriasComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    HomeComponent,
+    MoviesComponent,
+    SeriesComponent
   ],
   imports: [
     BrowserModule,

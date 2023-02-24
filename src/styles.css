@@ -10,5 +10,6 @@ body{
   margin: 0;
   background-color: var(--bodyBlue);
   overflow-x: hidden;
+  color: white;
 }
 
