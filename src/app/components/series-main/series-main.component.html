@@ -3,6 +3,7 @@
 </div>
 
 <div class="mainContainer">
-  <app-serie></app-serie>
+  <app-serie [serie]="serie" *ngFor="let serie of resultados"></app-serie>
 </div>
+<button (click)="loadMore()">Cargar Más</button>
 

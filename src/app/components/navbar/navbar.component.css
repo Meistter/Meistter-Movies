@@ -55,5 +55,7 @@ color: var(--white);
   font-family: Domine;
   font-size: 14px;
 }
-
+.nombre{
+  text-transform: capitalize;
+}
 

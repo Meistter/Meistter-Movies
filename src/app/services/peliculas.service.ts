@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class PeliculasService {
   private API = `${environment.API}/trending/movie/day`
   page = 0
-  maxPage = 1000
+
   constructor(private http: HttpClient) { }
 
   getTrendingMovies(){
@@ -17,12 +17,12 @@ export class PeliculasService {
   }
   getMoviesMainPaginated(){
 
-
+      //validar que no paginemos mas de la cantidad de paginas que trae la api
     this.page++;
 
     return this.http.get<Datos>(this.API, {params: {page: this.page}})
 
 
     }
-  // }
+
 }

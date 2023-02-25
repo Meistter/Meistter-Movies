@@ -7,3 +7,6 @@
 .title{
   margin: 30px;
 }
+.movie-container img{
+  width: 230px !important;
+}

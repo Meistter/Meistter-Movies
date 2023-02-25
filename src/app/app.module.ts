@@ -16,6 +16,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { SeriesComponent } from './pages/series/series.component';
 import { PeliculasMainComponent } from './components/peliculas-main/peliculas-main.component';
 import { SeriesMainComponent } from './components/series-main/series-main.component';
+import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { SeriesMainComponent } from './components/series-main/series-main.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GridModule, PagerModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: KeyInterceptor, multi: true}],
   bootstrap: [AppComponent]
