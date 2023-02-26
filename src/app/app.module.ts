@@ -17,6 +17,7 @@ import { SeriesComponent } from './pages/series/series.component';
 import { PeliculasMainComponent } from './components/peliculas-main/peliculas-main.component';
 import { SeriesMainComponent } from './components/series-main/series-main.component';
 import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
+import { CategoryComponent } from './pages/category/category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
     MoviesComponent,
     SeriesComponent,
     PeliculasMainComponent,
-    SeriesMainComponent
+    SeriesMainComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

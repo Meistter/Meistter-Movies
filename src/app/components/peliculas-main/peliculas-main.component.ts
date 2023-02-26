@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Datos } from 'src/app/models/movie';
+import { Datos, Movie } from 'src/app/models/movie';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 
 
@@ -22,7 +22,7 @@ constructor(private peliculasService: PeliculasService){}
     total_results: 0,
   };
 
-  resultados : any = []
+  resultados : Movie[] = [] //esto es un array de objetos
 
     ngOnInit(): void{
 
