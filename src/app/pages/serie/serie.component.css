@@ -1,0 +1,52 @@
+.headerContainer{
+  background-size: cover !important;
+  height: 580px;
+  position: absolute;
+  filter: blur(7px);
+  z-index: 1;
+  top: 50px;
+  width:100%;
+  margin-top: 8px;
+}
+.header{
+  z-index: 2;
+  position: relative ;
+  height: 580px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header img{
+  border-radius: 12px;
+}
+
+.contenido{
+  width: 800px;
+}
+.contenidoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titulo p:nth-child(1){
+  font-family: Domine;
+  font-size: 35px;
+}
+.titulo p:nth-child(2){
+  font-family: Domine;
+  font-size: 20px;
+}
+.titulo p:nth-child(2)::before{
+  content: "⭐"
+}
+.descripcion{
+  text-align: justify;
+  font-size: 20px;
+}
