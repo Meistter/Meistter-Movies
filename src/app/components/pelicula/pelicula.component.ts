@@ -7,6 +7,7 @@ import { Movie } from 'src/app/models/movie';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent {
+
   @Input() movie: Movie = {
   adult: false,
   backdrop_path: '',

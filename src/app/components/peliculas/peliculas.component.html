@@ -7,7 +7,9 @@
 
             <article class="main-moviesList">
                   <!-- Aqui agregamos las peliculas dinámicamente -->
-            <app-pelicula  [movie]="movie" *ngFor="let movie of datos.results"></app-pelicula>
+
+            <app-pelicula [movie]="movie" *ngFor="let movie of peliculas" ></app-pelicula>
+
             </article>
             </div>
 
@@ -19,7 +21,7 @@
 
 
               <article class="main-moviesList">
-              <app-serie [serie]="serie" *ngFor="let serie of datosSeries.results"></app-serie>
+              <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
               </article>
 
         </div>
