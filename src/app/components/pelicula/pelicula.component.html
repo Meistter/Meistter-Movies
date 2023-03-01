@@ -1,8 +1,10 @@
 <div class="movie-container">
+  <a [routerLink]="['/movie',movie.id]">
   <img
     src={{imgUrl}}{{movie.poster_path}}
     alt="Nombre de la película"
   />
+</a>
 </div>
 
 
