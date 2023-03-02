@@ -1,13 +1,14 @@
 <div class="navbar">
   <div class="navbarlogo">
 
-  <a class="nombre" href="/home">meistter Movies</a>
+  <a class="nombre" routerLink="home">meistter Movies</a>
   </div>
 
-  <form id="searchForm" class="search">
-      <input type="text" placeholder="Series y Peliculas" />
-      <button id="searchbtn" class="srchbtn" >Buscar</button>
-  </form>
+  <div #searchForm class="search">
+      <input #busqueda value="" type="text" placeholder="Series y Peliculas" />
+      <button id="searchbtn" class="srchbtn" (click)="searchQuery(busqueda.value)">Buscar</button>
+      <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
+    </div>
       <div class="navbar-menu">
           <ul>
             <li>
