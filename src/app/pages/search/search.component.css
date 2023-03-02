@@ -1,0 +1,12 @@
+.mainContainer{
+
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.title{
+  margin: 30px;
+}
+.movie-container img{
+  width: 230px !important;
+}
