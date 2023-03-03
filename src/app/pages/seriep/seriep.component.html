@@ -1,0 +1,21 @@
+<div class="header" >
+  <img src="{{imgurl}}{{serie.poster_path}}" alt="">
+</div>
+
+<body class="headerContainer" background="{{imgurl}}{{serie.poster_path}}">
+
+</body>
+<div class="contenidoContainer">
+ <div class="contenido">
+   <div class="titulo">
+     <p>{{serie.name}}</p>
+     <p>{{serie.vote_average}}</p>
+   </div>
+   <div class="descripcion">
+     <p>{{serie.overview}}</p>
+   </div>
+ </div>
+</div>
+<div class="container">
+  <app-pelicula [movie]="serie" *ngFor="let serie of series"></app-pelicula>
+</div>

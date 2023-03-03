@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SerieComponent } from './pages/serie/serie.component';
+import { SeriepComponent } from './pages/seriep/seriep.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MovieComponent } from './pages/movie/movie.component';
@@ -31,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'serie/:id',
-    component: SerieComponent
+    component: SeriepComponent
   },
   {
     path: 'series',

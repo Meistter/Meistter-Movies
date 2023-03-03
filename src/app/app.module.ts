@@ -20,6 +20,8 @@ import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
 import { CategoryComponent } from './pages/category/category.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { SearchComponent } from './pages/search/search.component';
+import { RelatedComponent } from './components/related/related.component';
+import { SeriepComponent } from './pages/seriep/seriep.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { SearchComponent } from './pages/search/search.component';
     SeriesMainComponent,
     CategoryComponent,
     MovieComponent,
-    SearchComponent
+    SearchComponent,
+    RelatedComponent,
+    SeriepComponent
   ],
   imports: [
     BrowserModule,

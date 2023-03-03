@@ -10,7 +10,13 @@ export class SeriesService {
   page = 0
   private API = `${environment.API}/trending/tv/day`
   private APISERIE = `${environment.API}/tv/`
+  private API_RELATED = `${environment.API}/tv/`
+
   constructor(private http: HttpClient) { }
+
+  getRelated(id:string){
+      return this.http.get<Datos>(`${this.API_RELATED}${id}/recommendations`)
+  }
 
   getSerie(id : string){
     return this.http.get<Movie>(`${this.APISERIE}${id}`)

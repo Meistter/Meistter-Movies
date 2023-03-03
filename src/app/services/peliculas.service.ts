@@ -9,10 +9,14 @@ import { Observable } from 'rxjs';
 export class PeliculasService {
   private API = `${environment.API}/trending/movie/day`
   private APIMOVIE = `${environment.API}/movie/`
+  private API_RELATED = `${environment.API}/movie/`
   page = 0
 
   constructor(private http: HttpClient) { }
 
+  getRelated(id:string){
+    return this.http.get<Datos>(`${this.API_RELATED}${id}/recommendations`)
+}
   getMovie(id : string){
     return this.http.get<Movie>(`${this.APIMOVIE}${id}`)
   }

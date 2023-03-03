@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Movie } from 'src/app/models/movie';
+import { Datos, Movie } from 'src/app/models/movie';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { environment } from 'src/enviroments/enviroments';
 
@@ -15,6 +15,15 @@ export class MovieComponent implements OnInit{
 
   pelicula: any = { //modificar tipado
   }
+
+  datos: Datos = {
+    page: 0,
+    results: [],
+    total_pages: 0,
+    total_results: 0,
+  };
+  peliculas: Movie[] = []
+
   movieId: string | null = null
   ngOnInit(): void {
     this.route.paramMap.subscribe(params=>{
@@ -23,9 +32,13 @@ export class MovieComponent implements OnInit{
 
       //ahora consultamos a la API
       if(this.movieId){
-      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data, console.log(this.pelicula);
-      })
+      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data})
+      }
+      //peliculas relacionadas
+      if(this.movieId){
+        this.peliculasService.getRelated(this.movieId).subscribe(data=>{this.datos = data, this.peliculas = this.datos.results.slice(0,8)})
       }
     })
   }
+
 }
