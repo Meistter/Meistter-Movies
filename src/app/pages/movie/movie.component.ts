@@ -15,6 +15,7 @@ export class MovieComponent implements OnInit{
 
   pelicula: any = { //modificar tipado
   }
+  generos: any = []
 
   datos: Datos = {
     page: 0,
@@ -32,7 +33,8 @@ export class MovieComponent implements OnInit{
 
       //ahora consultamos a la API
       if(this.movieId){
-      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data})
+      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data, this.generos = data.genres
+      })
       }
       //peliculas relacionadas
       if(this.movieId){

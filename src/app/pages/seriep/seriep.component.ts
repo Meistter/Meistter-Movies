@@ -12,8 +12,8 @@ export class SeriepComponent {
   constructor(private route: ActivatedRoute, private seriesService: SeriesService){}
   imgurl = environment.IMG_BASE
   serie: any = { //modificar tipado para obtener más cosas
-  }
 
+  }
   datos: Datos = {
     page: 0,
     results: [],
@@ -21,6 +21,7 @@ export class SeriepComponent {
     total_results: 0,
   };
   series: Movie[] = []
+  generos: any = []
   serieId: string | null = null
   ngOnInit(): void {
     this.route.paramMap.subscribe(params=>{
@@ -29,7 +30,9 @@ export class SeriepComponent {
 
       //ahora consultamos a la API
       if(this.serieId){
-      this.seriesService.getSerie(this.serieId).subscribe(data=>{this.serie = data})
+      this.seriesService.getSerie(this.serieId).subscribe(data=>{this.serie = data, this.generos = data.genres;
+      })
+      //peliculas relacionadas
       if(this.serieId){
         this.seriesService.getRelated(this.serieId).subscribe(data=>{this.datos = data, this.series = this.datos.results.slice(0,8)})
       }

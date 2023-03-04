@@ -8,14 +8,26 @@
 <div class="contenidoContainer">
  <div class="contenido">
    <div class="titulo">
-     <p>{{serie.name}}</p>
+    <p>{{serie.name}}</p>
      <p>{{serie.vote_average}}</p>
    </div>
-   <div class="descripcion">
-     <p>{{serie.overview}}</p>
-   </div>
+   <div class="fecha">
+    <p>Fecha de Estreno: {{serie.first_air_date}}</p>
+    <p>Pais de Origen: {{serie.origin_country}}</p>
+  </div>
+  <div class="descripcion">
+    <p>{{serie.overview}}</p>
+  </div>
+  <div class="generos">
+    <p>Generos</p>
+  </div>
+  <div class="categorias">
+    <app-categoria [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
+  </div>
+
  </div>
+
 </div>
 <div class="container">
   <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
-</div>
+  </div>

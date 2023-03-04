@@ -10,9 +10,22 @@
     <div class="titulo">
       <p>{{pelicula.title}}</p>
       <p>{{pelicula.vote_average}}</p>
+
+    </div>
+    <div class="votos">
+      <p>Votos: {{pelicula.vote_count}}</p>
+    </div>
+    <div class="fecha">
+      <p>Fecha de Estreno: {{pelicula.release_date}}</p>
     </div>
     <div class="descripcion">
       <p>{{pelicula.overview}}</p>
+    </div>
+    <div class="generos">
+      <p>Generos</p>
+    </div>
+    <div class="categorias">
+      <app-categoria [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
     </div>
   </div>
 </div>

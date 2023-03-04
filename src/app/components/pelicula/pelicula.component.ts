@@ -11,7 +11,7 @@ export class PeliculaComponent {
   @Input() movie: Movie = {
   adult: false,
   backdrop_path: '',
-  genre_ids: [],
+  genres: [],
   id: 0,
   media_type: '',
   original_languge: '',

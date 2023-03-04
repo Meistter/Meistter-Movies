@@ -30,10 +30,19 @@
   align-items: center;
   margin-top: 30px;
 }
+.votos{
+  text-align: right;
+  margin-top: 0;
+  font-family: Domine;
+  font-size: 15px;
+
+}
 .titulo{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 20px;
+  margin-top: 40px;
 }
 .titulo p:nth-child(1){
   font-family: Domine;
@@ -49,6 +58,11 @@
 .descripcion{
   text-align: justify;
   font-size: 20px;
+  font-family: Domine;
+}
+.fecha{
+  font-size: 20px;
+  margin-top: 60px;
 }
 .container{
   height: 250px;
@@ -60,3 +74,17 @@
   justify-content: space-between;
   align-items: center;
 }
+.categorias{
+  margin-bottom: 80px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.generos{
+  text-align: center;
+  font-size: 30px;
+  font-family: Domine;
+  margin-top: 80px;
+}
+
