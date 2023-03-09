@@ -28,7 +28,7 @@ export class PeliculaComponent {
 
 
   imgUrl = environment.IMG_BASE
-  // Cada Vez que hacemos click en favoritos debemos emitir una señal al componente favoritos para que este recargue la información
+  //! Cada Vez que hacemos click en favoritos debemos emitir una señal al componente favoritos para que este recargue la información
   saveOrDeleteFromLS(){
    //Primero obtenemos la lista del local storage
    const likedMoviesSeries = localStorage.getItem('liked')
