@@ -1,10 +1,11 @@
 <div class="movie-container">
-  <a [routerLink]="['/movie',movie.id]">
+  <a [routerLink]="['/movie',movie.id]"></a>
   <img
     src={{imgUrl}}{{movie.poster_path}}
     alt="Nombre de la película"
   />
-</a>
+
+<button class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>
 </div>
 
 

@@ -1,5 +1,5 @@
 .movie-container{
-
+z-index: 1;
   margin-right: 10px;
   margin-bottom: 30px;
 }
@@ -7,5 +7,27 @@
   width: 150px;
   border-radius: 8px;
   /* cursor: pointer; */
+}
+.movie-like-btn{
+  position: absolute;
+  /* top: 50px; */
+  /* right: 10px; */
+  /* height: 30px; */
+
+  margin-right: 30px;
+  /* width: 30px; */
+  border-radius: 30px;
+  /* padding: 0; */
+  /* margin: 0; */
+  z-index: 2;
+  /* border: none; */
+  /* background-color: var(--navBlue); */
+  cursor: pointer;
+}
+.movie-like-btn::before{
+  content: '🤍';
+}
+.movie-like-btn--liked::before{
+  content: '💖';
 }
 

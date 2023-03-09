@@ -29,7 +29,28 @@ export class PeliculaComponent {
 
   imgUrl = environment.IMG_BASE
 
+  saveOrDeleteFromLS(){
+   //Primero obtenemos la lista del local storage
+   const likedMoviesSeries = localStorage.getItem('liked')
+   let likedMovies = []
+   let bandera
+   let i = 0
 
+   if (likedMoviesSeries){
+    likedMovies = JSON.parse(likedMoviesSeries)
+    console.log(likedMovies); //En este punto ya tenemos el array con las peliculas a la mano, debo buscar en el array la pelicula actual, si esta la borro y si no esta la agrego, luego vuelvo a ingresar el array al LS
+
+
+    }else{ //si no existe liked en LS
+      likedMovies.push(this.movie)
+      likedMovies.push(1)
+      localStorage.setItem('liked', JSON.stringify(likedMovies))
+  }
+   //si el id de la pelicula pertenece al LS entonces lo sacamos del LS
+
+   //si no pertenece entonces lo añadimos al LS
+
+  }
 
 
 }
