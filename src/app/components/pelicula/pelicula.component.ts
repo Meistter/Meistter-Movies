@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { environment } from 'src/enviroments/enviroments';
 import { Movie } from 'src/app/models/movie';
 @Component({
@@ -7,7 +7,7 @@ import { Movie } from 'src/app/models/movie';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent {
-
+  @Output() atSaveFavorite: EventEmitter<string> = new EventEmitter<string>();
   @Input() movie: Movie = {
   adult: false,
   backdrop_path: '',
@@ -28,27 +28,44 @@ export class PeliculaComponent {
 
 
   imgUrl = environment.IMG_BASE
-
+  // Cada Vez que hacemos click en favoritos debemos emitir una señal al componente favoritos para que este recargue la información
   saveOrDeleteFromLS(){
    //Primero obtenemos la lista del local storage
    const likedMoviesSeries = localStorage.getItem('liked')
+
    let likedMovies = []
    let bandera
    let i = 0
 
-   if (likedMoviesSeries){
-    likedMovies = JSON.parse(likedMoviesSeries)
-    console.log(likedMovies); //En este punto ya tenemos el array con las peliculas a la mano, debo buscar en el array la pelicula actual, si esta la borro y si no esta la agrego, luego vuelvo a ingresar el array al LS
+  if(likedMoviesSeries === null){
 
 
-    }else{ //si no existe liked en LS
       likedMovies.push(this.movie)
-      likedMovies.push(1)
+      // likedMovies.push(1)
       localStorage.setItem('liked', JSON.stringify(likedMovies))
   }
-   //si el id de la pelicula pertenece al LS entonces lo sacamos del LS
+  if( likedMoviesSeries !== null){
+      likedMovies = JSON.parse(likedMoviesSeries)
 
-   //si no pertenece entonces lo añadimos al LS
+      const resultado = likedMovies.findIndex( (movie: { id: number; }) => movie.id === this.movie.id );
+      console.log(resultado);
+
+      //elimino
+      if (resultado !== -1){
+        likedMovies.splice(resultado,1)
+        localStorage.setItem('liked', JSON.stringify(likedMovies))
+      }
+      //añado
+      if (resultado == -1){
+        likedMovies.push(this.movie)
+      // likedMovies.push(1)
+      localStorage.setItem('liked', JSON.stringify(likedMovies))
+      }
+  }
+
+
+   this.atSaveFavorite.emit() //!Aqui emitimos la señal al componente favoritos para que actualice
+
 
   }
 

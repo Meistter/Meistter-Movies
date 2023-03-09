@@ -1,0 +1,24 @@
+.main-movies-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px;
+  font-family: Domine;
+  color: white;
+
+}
+.favoritos-container{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 25px;
+}
+.movie-container img{
+  width: 230px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: red !important;
+  cursor: default !important;
+
+}

@@ -6,7 +6,7 @@ z-index: 1;
 .movie-container img{
   width: 150px;
   border-radius: 8px;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 .movie-like-btn{
   position: absolute;

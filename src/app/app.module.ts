@@ -22,6 +22,7 @@ import { MovieComponent } from './pages/movie/movie.component';
 import { SearchComponent } from './pages/search/search.component';
 import { RelatedComponent } from './components/related/related.component';
 import { SeriepComponent } from './pages/seriep/seriep.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { SeriepComponent } from './pages/seriep/seriep.component';
     MovieComponent,
     SearchComponent,
     RelatedComponent,
-    SeriepComponent
+    SeriepComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
