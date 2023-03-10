@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { environment } from 'src/enviroments/enviroments';
 import { Movie } from 'src/app/models/movie';
+import { ComunicationService } from 'src/app/services/comunication.service';
 @Component({
   selector: 'app-pelicula',
   templateUrl: './pelicula.component.html',
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent {
-  @Output() atSaveFavorite: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor(private comunicationService: ComunicationService){}
   @Input() movie: Movie = {
   adult: false,
   backdrop_path: '',
@@ -63,8 +65,12 @@ export class PeliculaComponent {
       }
   }
 
+    this.comunicationService.disparadorFavoritos.emit()
 
-   this.atSaveFavorite.emit() //!Aqui emitimos la señal al componente favoritos para que actualice
+    //Estamos usando un servicio para poder emitir hacia un componente que no es padre ni hijo, aqui llamamos
+    //al servicio y le decimos que emita, el que va a emitir es el servicio, y en favoritos nos suscribimos a la funcion emisora
+    //del servicio para quedar al pendiente de cada vez que se ejecute la emision y ejecutar la funcion actualizar
+
 
 
   }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
+import { ComunicationService } from 'src/app/services/comunication.service';
 import { environment } from 'src/enviroments/enviroments';
 
 @Component({
@@ -8,7 +9,7 @@ import { environment } from 'src/enviroments/enviroments';
   styleUrls: ['./serie.component.css']
 })
 export class SerieComponent{
-
+  constructor(private comunicationService: ComunicationService){}
   @Input() serie: Movie = {
     adult: false,
     backdrop_path: '',
@@ -63,10 +64,10 @@ export class SerieComponent{
          localStorage.setItem('liked', JSON.stringify(likedMovies))
          }
      }
-
-      //si el id de la pelicula pertenece al LS entonces lo sacamos del LS
-
-      //si no pertenece entonces lo añadimos al LS
+     this.comunicationService.disparadorFavoritos.emit()
+      //Estamos usando un servicio para poder emitir hacia un componente que no es padre ni hijo, aqui llamamos
+      //al servicio y le decimos que emita, el que va a emitir es el servicio, y en favoritos nos suscribimos a la funcion emisora
+      //del servicio para quedar al pendiente de cada vez que se ejecute la emision y ejecutar la funcion actualizar
 
      }
 }
