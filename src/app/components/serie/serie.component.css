@@ -1,5 +1,7 @@
 .serie-container{
+  /* position: absolute; */
   /* /* margin-left: 20px; */
+  /* top: 500  px; */
   margin-right: 10px;
   margin-bottom: 30px;
 }
@@ -15,7 +17,7 @@
   content: '💖';
 }
 .serie-like-btn{
-  position: absolute;
+  /* position: absolute; */
   /* top: 50px; */
   /* right: 10px; */
   /* height: 30px; */
@@ -25,9 +27,12 @@
   border-radius: 30px;
   /* padding: 0; */
   /* margin: 0; */
-  z-index: 2;
+  /* z-index: 2; */
   /* border: none; */
   /* background-color: var(--navBlue); */
   cursor: pointer;
 
+  }
+  .superContainer{
+    /* position: relative; */
   }

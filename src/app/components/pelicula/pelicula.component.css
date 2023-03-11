@@ -1,5 +1,6 @@
 .movie-container{
-z-index: 1;
+  /* position: absolute; */
+  /* z-index: 1; */
   margin-right: 10px;
   margin-bottom: 30px;
 }
@@ -9,8 +10,8 @@ z-index: 1;
   cursor: pointer;
 }
 .movie-like-btn{
-  position: absolute;
-  /* top: 50px; */
+   /* position: absolute; */
+  /* top: 500px;  */
   /* right: 10px; */
   /* height: 30px; */
 
@@ -19,7 +20,7 @@ z-index: 1;
   border-radius: 30px;
   /* padding: 0; */
   /* margin: 0; */
-  z-index: 2;
+  /* z-index: 2; */
   /* border: none; */
   /* background-color: var(--navBlue); */
   cursor: pointer;
@@ -30,4 +31,6 @@ z-index: 1;
 .movie-like-btn--liked::before{
   content: '💖';
 }
-
+.superContainer{
+  /* position: relative; */
+}

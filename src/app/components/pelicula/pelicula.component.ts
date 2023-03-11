@@ -9,6 +9,7 @@ import { ComunicationService } from 'src/app/services/comunication.service';
 })
 export class PeliculaComponent {
 
+
   constructor(private comunicationService: ComunicationService){}
   @Input() movie: Movie = {
   adult: false,
@@ -36,8 +37,7 @@ export class PeliculaComponent {
    const likedMoviesSeries = localStorage.getItem('liked')
 
    let likedMovies = []
-   let bandera
-   let i = 0
+
 
   if(likedMoviesSeries === null){
 
@@ -56,12 +56,17 @@ export class PeliculaComponent {
       if (resultado !== -1){
         likedMovies.splice(resultado,1)
         localStorage.setItem('liked', JSON.stringify(likedMovies))
+        // if(this.likeButton){
+        //   this.likeButton.classList.remove('movie-like-btn--liked')
+        //   this.likeButton.classList.add('movie-like-btn')
+        //   }
       }
       //añado
       if (resultado == -1){
         likedMovies.push(this.movie)
       // likedMovies.push(1)
       localStorage.setItem('liked', JSON.stringify(likedMovies))
+
       }
   }
 
