@@ -23,6 +23,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { RelatedComponent } from './components/related/related.component';
 import { SeriepComponent } from './pages/seriep/seriep.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,9 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GridModule, PagerModule
+    GridModule,
+    PagerModule,
+    ReactiveFormsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: KeyInterceptor, multi: true}],
   bootstrap: [AppComponent]

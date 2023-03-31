@@ -11,7 +11,10 @@ import { SearchService } from 'src/app/services/search.service';
 export class SearchComponent implements OnInit {
 
   constructor(private searchService: SearchService, private route: ActivatedRoute){}
-  searchQuery: string | null =  'otto'
+  searchQuery: any
+  //! esto es del segundo metodo de busqueda(ENVIANDO INFORMACION ENTRE MODULOS A TRAVES DE UN SERVICIO CON UN OBSERBABLE)
+  // datos: any
+
   datos: Datos = {
     page: 0,
     results: [],
@@ -21,22 +24,24 @@ export class SearchComponent implements OnInit {
   resultados : Movie[] = [] //esto es un array de objetos
 
   ngOnInit(): void {
-    //buscamos
+    //!Segundo metodo de busqueda(ENVIANDO INFORMACION ENTRE MODULOS A TRAVES DE UN SERVICIO CON UN OBSERBABLE),
+    //! estamos subscritos a un observable para traernos los datos
+    // this.searchService.search$.subscribe(data=>{this.datos = data,this.resultados = this.datos.results})
 
-    //sacamos la busqueda del queryparam
+//buscamos
+    //*sacamos la busqueda del queryparam
+
     this.route.queryParamMap.subscribe(params => {
-      this.searchQuery = params.get('search')
+      this.searchQuery = params.get('search'),
+        this.searchService.searchPaginated(this.searchQuery, false).subscribe(data=>{this.resultados = data.results})
+                                                  // con este false estamos diciendo que no es paginacion, es busqueda inicial
+
     })
-
-    //logica a aplicar: en el nav al hacer click en buscar mandamos a la url un queryparam ?palabras-a-buscar, luego aqui en search obtenemos ese queryparam y hacemos la solicitud enviando ese query, de esa forma obtenemos los valores correspondientes e imprimimos
-    if (this.searchQuery){
-    this.searchService.searchPaginated(this.searchQuery).subscribe(data=>{this.resultados = data.results, console.log(data)})
-    }
-
   }
+
   loadMore(){
     if (this.searchQuery)
-    this.searchService.searchPaginated(this.searchQuery).subscribe(data=>{this.resultados =this.resultados.concat(data.results)})
+    this.searchService.searchPaginated(this.searchQuery, true).subscribe(data=>{this.resultados =this.resultados.concat(data.results)})
   }
 
 

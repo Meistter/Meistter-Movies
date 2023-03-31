@@ -3,10 +3,11 @@
 
   <a class="nombre" routerLink="home">meistter Movies</a>
   </div>
-
+<!-- !A partir de ahora usaremos formularios de angular Forms -->
   <div #searchForm class="search">
-      <input #busqueda value="" type="text" placeholder="Series y Peliculas" />
-      <button id="searchbtn" class="srchbtn" (click)="searchQuery(busqueda.value)">Buscar</button>
+      <input #busqueda [formControl]="searchField" type="search" placeholder="Series y Peliculas" />
+
+      <button id="searchbtn" class="srchbtn" (click)="searchQuery()">Buscar</button>
       <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
     </div>
       <div class="navbar-menu">
