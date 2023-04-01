@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable, Input, Output } from '@angular/core';
-import { PeliculaComponent } from '../components/pelicula/pelicula.component';
+import { PeliculaComponent } from '../website/components/pelicula/pelicula.component';
 @Injectable({
   providedIn: 'root'
 })

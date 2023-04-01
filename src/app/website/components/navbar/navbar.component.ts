@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
-import { SearchService } from '../../services/search.service';
+import { SearchService } from '../../../services/search.service';
 
 @Component({
   selector: 'app-navbar',

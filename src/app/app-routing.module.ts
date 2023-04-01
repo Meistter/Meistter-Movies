@@ -1,51 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SeriepComponent } from './pages/seriep/seriep.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MovieComponent } from './pages/movie/movie.component';
-import { MoviesComponent } from './pages/movies/movies.component';
-import { SeriesComponent } from './pages/series/series.component';
-import { SearchComponent } from './pages/search/search.component';
+//PreloadAllModules: Carga todos los modules en la web pero uno detras de otro solo cuando se esta desocupado, ayuda a optimizar la carga de la web
+//CustomPreloadService: Es un servicio creado manualmente por nosotros donde definimos que cargaran solo los moduloes que en el app-routing les pusimos load = true
+
+//* QuickLinkStrategy:
+//ESTE MODULO NO ES OFICIAL DE ANGULAR, nos permite CARGAR solo los Modulos que se muestran en pantalla en el momento, de esta forma se iran cargando a medida que le fuera posible al usuario acceder a él
+//el QuicklinkModule lo importamos en el app.module //? npm install ngx-quicklink
+import { QuicklinkStrategy } from 'ngx-quicklink';
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'search',
-    component: SearchComponent
-  },
-  {
+
+  {//aqui estamos importando el Modulo de administracion que creamos (cms)
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    loadChildren: ()=> import('../app/website/website.module').then(m => m.WebsiteModule),
+    data:{
+      preload: true
+    }
   },
-  {
-    path: 'movies',
-    component: MoviesComponent
+  {//aqui estamos importando el Modulo de administracion que creamos (cms)
+    path: 'admin',
+    // canActivate: [AdminGuard],
+    loadChildren: ()=> import('../app/admin/admin.module').then(m => m.AdminModule)
   },
-  {
-    path: 'movie/:id',
-    component: MovieComponent
-  },
-  {
-    path: 'serie/:id',
-    component: SeriepComponent
-  },
-  {
-    path: 'series',
-    component: SeriesComponent
-  },
-  {
-    path: 'category/:id',
-    component: CategoryComponent
-  }
+  // {//esta es la ruta para cuando no se encuentra la ruta, error 404, esto tiene que estar de ultimo en esta lista de rutas
+  //   path: '**',
+  //  //!Falta crear la ruta no encontrada
+  //   component: NotFoundComponent
+  // }
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
+@NgModule({                                                 //estrategia de carga de modulos
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: QuicklinkStrategy})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
