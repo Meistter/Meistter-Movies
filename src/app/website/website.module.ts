@@ -22,7 +22,9 @@ import { RelatedComponent } from './components/related/related.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MaterialModule } from './../material/material.module';
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -43,12 +45,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     RelatedComponent,
     SeriepComponent,
     FavoritosComponent,
-    LayoutComponent],
+    LayoutComponent,
+    RegisterComponent,
+    LoginComponent],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
     QuicklinkModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ]
 })
 export class WebsiteModule { }

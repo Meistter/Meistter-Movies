@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { KeyInterceptor } from './interceptors/key.interceptor';
 import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -16,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     GridModule,
     PagerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: KeyInterceptor, multi: true}],
   bootstrap: [AppComponent]
