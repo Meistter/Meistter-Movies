@@ -3,5 +3,20 @@
   align-items: center;
   justify-content: center;
   color: black;
-  padding: 250px;
+  padding: 140px;
+}
+.register-card{
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.password{
+  width: 100%;
+}
+.email{
+  width: 100%;
+}
+.passwordFormat{
+  font-size: 15px;
 }

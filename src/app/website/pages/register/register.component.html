@@ -1,33 +1,42 @@
-<div class="container">
-  <mat-card class="example-card">
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-card class="register-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Registrate</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <mat-form-field appearance="fill">
-        <mat-label>Enter your email</mat-label>
+      <mat-form-field appearance="fill" class="email">
+        <mat-label>Ingresa tu correo</mat-label>
         <input matInput placeholder="pat@example.com" formControlName="email" required>
-        <!-- <mat-error *ngIf="emailField.invalid">{{getErrorMessage()}}</mat-error> -->
+        <mat-error *ngIf="this.form.controls['email'].hasError('required')">{{getErrorMessage()}}</mat-error>
+        <mat-error *ngIf="this.form.controls['email'].hasError('email')">Formato Invalido</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="password">
         <mat-label>Ingresa tu contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+
+        <mat-error *ngIf="this.form.controls['password'].hasError('required')">{{getErrorMessage()}}</mat-error>
+        <mat-error *ngIf="this.form.controls['password'].hasError('invalid_password')">La contraseña no cumple el formato</mat-error>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
+
       </mat-form-field>
-      <mat-form-field appearance="fill">
+        <!-- <p *ngIf="passwordField?.dirty"> -->
+        <a class="passwordFormat" *ngIf="passwordField?.dirty && this.form.controls['password'].hasError('invalid_password')">{{getPasswordParams()}}</a>
+        <!-- </p> -->
+      <mat-form-field appearance="fill" class="password">
         <mat-label>Ingresa nuevamente tu contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <input matInput [type]="hide2 ? 'password' : 'text'" formControlName="confirmPassword">
+        <mat-error *ngIf="this.form.controls['confirmPassword'].hasError('required')">{{getErrorMessage()}}</mat-error>
+        <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
     </mat-card-content>
+    <mat-error *ngIf="confirmPasswordField?.dirty && form.hasError('match_password')">Las contraseñas no coinciden</mat-error>
     <mat-card-actions>
-      <button mat-button>Aceptar</button>
 
+      <button mat-button type="submit" [disabled]="form.invalid">Aceptar</button>
     </mat-card-actions>
   </mat-card>
-</div>
+</form>
