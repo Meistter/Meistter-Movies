@@ -3,10 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from '../auth/components/login/login.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { MoviesComponent } from './pages/movies/movies.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { SearchComponent } from './pages/search/search.component';
 import { SeriepComponent } from './pages/seriep/seriep.component';
 import { SeriesComponent } from './pages/series/series.component';
@@ -50,14 +49,6 @@ const routes: Routes = [
       {
         path: 'category/:id',
         component: CategoryComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
       }
     ]
   }

@@ -20,8 +20,12 @@ const routes: Routes = [
   },
   {//aqui estamos importando el Modulo de administracion que creamos (cms)
     path: 'admin',
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     loadChildren: ()=> import('../app/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: ()=> import('../app/auth/auth.module').then(m => m.AuthModule)
   },
   {//esta es la ruta para cuando no se encuentra la ruta, error 404, esto tiene que estar de ultimo en esta lista de rutas
     path: '**',

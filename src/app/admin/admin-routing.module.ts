@@ -16,6 +16,7 @@ const routes: Routes = [
         path: '',
         component: HomeComponent
       },
+
       // {
       //   path: '',
       //   redirectTo: 'home', //!no ponemos el '/' ya que no es el root principal, esta es algo como una app secundaria

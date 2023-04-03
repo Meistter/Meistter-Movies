@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { MyValidators } from 'src/app/utils/validators';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,7 +12,7 @@ export class RegisterComponent implements OnInit {
   hide = true //esto es para ocultar la contraseña
   hide2 = true //esto es para ocultar la contraseña
 
-  constructor(private formBuilder: FormBuilder){
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router){
   }
 
 form = new FormGroup({
@@ -32,6 +34,17 @@ form = new FormGroup({
   onSubmit() {
 
     console.log('form: ',this.form.value);
+
+    if(this.form.valid){
+      const value = this.form.value
+      const valueEmail = value.email
+      const valuePass = value.password
+      if (valueEmail && valuePass)
+      this.authService.createUser(valueEmail, valuePass)
+      .then(() => {
+        this.router.navigate(['/auth/login']);
+      });
+    }
   }
 
 get emailField() {

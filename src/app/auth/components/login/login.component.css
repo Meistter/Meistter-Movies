@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   color: black;
-  padding: 140px;
+  padding: 100px;
 }
 .register-card{
   width: 350px;
@@ -19,4 +19,7 @@
 }
 .passwordFormat{
   font-size: 15px;
+}
+.redirect{
+  margin-bottom: 10px;
 }

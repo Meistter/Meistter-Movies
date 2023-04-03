@@ -18,14 +18,12 @@
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
-
       </mat-form-field>
-
-
     </mat-card-content>
-
     <mat-card-actions>
       <button mat-button type="submit" [disabled]="form.invalid">Aceptar</button>
     </mat-card-actions>
+    <p>o</p>
+    <button class="redirect" mat-button routerLink="/auth/register">Registrate</button>
   </mat-card>
 </form>
