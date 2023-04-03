@@ -27,13 +27,11 @@ form = new FormGroup({
     // si queremos ver el valor en tiempo real en lugar de usando un boton nos subscribimos a la variable usando la funcion
     // valueChanges
     // this.form.get('email')?.valueChanges.subscribe(value =>{console.log(value)})
-    this.form.valueChanges.subscribe(value =>{console.log(value)}) //!esto no escucha 1 elemento especifico si no todo el formulario
+    // this.form.valueChanges.subscribe(value =>{console.log(value)}) //!esto no escucha 1 elemento especifico si no todo el formulario
 
   }
 
   onSubmit() {
-
-    console.log('form: ',this.form.value);
 
     if(this.form.valid){
       const value = this.form.value

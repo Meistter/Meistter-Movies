@@ -21,7 +21,6 @@ export class MyValidators {
     const formato = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{5,20}$/
 
     if(formato.test(value)){
-      console.log('valida');
       return null
     } else {
       return {invalid_password: true}
