@@ -10,11 +10,10 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/admin">
-        <mat-icon>bubble_chart</mat-icon>Dashboard</a
-      >
+        <mat-icon>bubble_chart</mat-icon> Dashboard</a>
       <a mat-list-item routerLink="/admin/"><mat-icon>store</mat-icon> Peliculas</a>
       <a mat-list-item routerLink="/admin/"><mat-icon>category</mat-icon> Series</a>
-      <a mat-list-item > <mat-icon>login</mat-icon> Cerrar Sesión</a>
+      <a mat-list-item (click)="logout()"> <mat-icon>login</mat-icon> Cerrar Sesión</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

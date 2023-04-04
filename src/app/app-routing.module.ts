@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {//aqui estamos importando el Modulo de administracion que creamos (cms)
     path: 'admin',
-    // canActivate: [AdminGuard],
+    canActivate: [AdminGuard],
     loadChildren: ()=> import('../app/admin/admin.module').then(m => m.AdminModule)
   },
   {

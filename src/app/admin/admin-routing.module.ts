@@ -9,19 +9,14 @@ const routes: Routes = [
     children: [
       //* Aqui van las rutas hijas de este MODULO
       {
-        path: 'home',
+        path: 'dashboard',
         component: HomeComponent
       },
       {
         path: '',
-        component: HomeComponent
+        redirectTo: 'dashboard', //!no ponemos el '/' ya que no es el root principal, esta es algo como una app secundaria
+        pathMatch: 'full'
       },
-
-      // {
-      //   path: '',
-      //   redirectTo: 'home', //!no ponemos el '/' ya que no es el root principal, esta es algo como una app secundaria
-      //   pathMatch: 'full'
-      // },
 
     ]
 
