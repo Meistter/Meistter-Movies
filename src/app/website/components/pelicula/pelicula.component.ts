@@ -9,7 +9,7 @@ import { ComunicationService } from 'src/app/services/comunication.service';
 })
 export class PeliculaComponent {
 
-
+  corazon = false
   constructor(private comunicationService: ComunicationService){}
   @Input() movie: Movie = {
   adult: false,
@@ -55,6 +55,7 @@ export class PeliculaComponent {
       //elimino
       if (resultado !== -1){
         likedMovies.splice(resultado,1)
+        this.corazon = false
         localStorage.setItem('liked', JSON.stringify(likedMovies))
         // if(this.likeButton){
         //   this.likeButton.classList.remove('movie-like-btn--liked')
@@ -64,7 +65,7 @@ export class PeliculaComponent {
       //añado
       if (resultado == -1){
         likedMovies.push(this.movie)
-      // likedMovies.push(1)
+      this.corazon = true
       localStorage.setItem('liked', JSON.stringify(likedMovies))
 
       }

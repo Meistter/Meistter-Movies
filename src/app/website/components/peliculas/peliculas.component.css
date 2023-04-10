@@ -6,10 +6,15 @@
   margin: 20px;
   font-family: Domine;
   color: white;
+  /* margin-top: 20px; */
 
 }
 .main-movies-header button{
   margin-right: 80px;
+
+}
+.main-movies-header{
+  margin-top: 50px;
 }
 .main-moviesList{
   display: flex;
@@ -19,4 +24,8 @@
 }
 .main-movies-btn{
   cursor: pointer;
+}
+.btn{
+  border-color: white;
+  color: white;
 }

@@ -1,32 +1,35 @@
-<div class="navbar">
-  <div class="navbarlogo">
 
-  <a class="nombre" routerLink="home">meistter Movies</a>
-  </div>
-<!-- !A partir de ahora usaremos formularios de angular Forms -->
-  <div #searchForm class="search">
-      <input #busqueda [formControl]="searchField" type="search" placeholder="Series y Peliculas" />
 
-      <button id="searchbtn" class="srchbtn" (click)="searchQuery()">Buscar</button>
-      <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
-    </div>
-      <div class="navbar-menu">
-          <ul>
-            <li>
-                <a routerLink="home">Inicio</a>
-            </li>
-            <li>
-                <a routerLink="movies">Peliculas</a>
-            </li>
-            <li>
-                <a routerLink="series">Series</a>
-            </li>
-            <li>
-              <a>Contacto</a>
-            </li>
-            <li>
-              <a routerLink="/auth/login">Administrador</a>
-            </li>
-          </ul>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="navbarlogo">
+          <a class="nombre" routerLink="home">meistter Movies</a>
+          </div>
+          <div class="search" role="search">
+            <input class="form-control me-2" type="search" #busqueda [formControl]="searchField" type="search" placeholder="Series y Peliculas" aria-label="Search">
+            <button class="btn" id="searchbtn"(click)="searchQuery()" type="submit">Buscar</button>
+          </div>
+
+
+          <div class="navbar-menu">
+            <ul>
+              <li>
+                  <a routerLink="home">Inicio</a>
+              </li>
+              <li>
+                  <a routerLink="movies">Peliculas</a>
+              </li>
+              <li>
+                  <a routerLink="series">Series</a>
+              </li>
+              <li>
+                <a>Contacto</a>
+              </li>
+              <li>
+                <a routerLink="/auth/login">Administrador</a>
+              </li>
+            </ul>
+          </div>
       </div>
-    </div>
+    </nav>

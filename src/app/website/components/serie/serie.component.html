@@ -6,6 +6,6 @@
     alt="Nombre de la serie"
   />
   </a>
-  <button class="serie-like-btn" (click)="saveOrDeleteFromLS()"></button>
+  <button type="button" [ngClass]="corazon == true ? 'serie-like-btn--liked' : 'serie-like-btn'" class="btn serie-like-btn "  (click)="saveOrDeleteFromLS()"></button>
 </div>
 </div>

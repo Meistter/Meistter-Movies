@@ -9,6 +9,7 @@ import { environment } from 'src/enviroments/enviroments';
   styleUrls: ['./serie.component.css']
 })
 export class SerieComponent{
+  corazon = false
   constructor(private comunicationService: ComunicationService){}
   @Input() serie: Movie = {
     adult: false,
@@ -55,12 +56,13 @@ export class SerieComponent{
          //elimino
          if (resultado !== -1){
            likedMovies.splice(resultado,1)
+           this.corazon = false
            localStorage.setItem('liked', JSON.stringify(likedMovies))
          }
          //añado
          if (resultado == -1){
            likedMovies.push(this.serie)
-         // likedMovies.push(1)
+           this.corazon = true
          localStorage.setItem('liked', JSON.stringify(likedMovies))
          }
      }

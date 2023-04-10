@@ -15,7 +15,8 @@
   margin: 25px;
 }
 .movie-container img{
-  width: 230px !important;
+  width: 240px !important;
+  height: 340px !important;
   border-style: solid !important;
   border-width: 1px !important;
   border-color: red !important;

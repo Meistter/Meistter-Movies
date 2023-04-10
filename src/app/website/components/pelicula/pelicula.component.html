@@ -1,14 +1,14 @@
 <div class="superContainer">
 
-<div class="movie-container">
+<div class="card movie-container">
   <a [routerLink]="['/movie',movie.id]">
   <img
     src={{imgUrl}}{{movie.poster_path}}
     alt="Nombre de la película"
   />
   </a>
-  <button  class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>
-</div>
 
+</div>
+<button type="button"  [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'" class="btn movie-like-btn " (click)="saveOrDeleteFromLS()"></button>
 
 </div>
