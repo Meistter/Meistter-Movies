@@ -3,7 +3,9 @@
   <h2 class="main-movies-title">Mis Favoritos</h2>
 </div>
 <div class="favoritos-container">
-  <app-pelicula (atSaveFavorite)="actualizar()" [movie]="movie" *ngFor="let movie of movies"></app-pelicula>
+<!-- al enviarle corazon=true le estamos indicando que encianda el corazon rojo al renderizar app pelicula en este componente -->
+
+  <app-pelicula [corazon]="true" (atSaveFavorite)="actualizar()" [movie]="movie" *ngFor="let movie of movies"></app-pelicula>
   <!-- Aqui estamos recibiendo la emision desde el componente Pelicula y esa emision nos ejecuta la funcion actualizar -->
 </div>
 <!-- <button (click)="actualizar()">Recarga</button> -->

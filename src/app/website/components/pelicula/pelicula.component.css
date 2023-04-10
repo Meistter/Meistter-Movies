@@ -1,29 +1,21 @@
 .movie-container{
-  /* position: absolute; */
-  /* z-index: 1; */
   margin-right: 10px;
   margin-bottom: 30px;
 }
 .movie-container img{
-  width: 150px;
+  width: 155px;
+  height: 225px;
   border-radius: 8px;
   cursor: pointer;
 }
 .movie-like-btn{
-   /* position: absolute; */
-  /* top: 500px;  */
-  /* right: 10px; */
-  /* height: 30px; */
-
+  background-color: var(--navBlue);
   margin-right: 30px;
-  /* width: 30px; */
   border-radius: 30px;
-  /* padding: 0; */
-  /* margin: 0; */
-  /* z-index: 2; */
-  /* border: none; */
-  /* background-color: var(--navBlue); */
+  border-color: white;
   cursor: pointer;
+  width: 50px;
+  height: 30px;
 }
 .movie-like-btn::before{
   content: '🤍';
@@ -31,6 +23,4 @@
 .movie-like-btn--liked::before{
   content: '💖';
 }
-.superContainer{
-  /* position: relative; */
-}
+

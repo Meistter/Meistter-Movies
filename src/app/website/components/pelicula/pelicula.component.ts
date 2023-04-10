@@ -8,8 +8,9 @@ import { ComunicationService } from 'src/app/services/comunication.service';
   styleUrls: ['./pelicula.component.css']
 })
 export class PeliculaComponent {
-
-
+  // corazon = false
+@Input() corazon: boolean = false
+// ponemos corazon como un input para poder recibir el true desde favoritos para activar el corazon al cargar
   constructor(private comunicationService: ComunicationService){}
   @Input() movie: Movie = {
   adult: false,
@@ -56,15 +57,12 @@ export class PeliculaComponent {
       if (resultado !== -1){
         likedMovies.splice(resultado,1)
         localStorage.setItem('liked', JSON.stringify(likedMovies))
-        // if(this.likeButton){
-        //   this.likeButton.classList.remove('movie-like-btn--liked')
-        //   this.likeButton.classList.add('movie-like-btn')
-        //   }
+        this.corazon = false
       }
       //añado
       if (resultado == -1){
         likedMovies.push(this.movie)
-      // likedMovies.push(1)
+      this.corazon = true
       localStorage.setItem('liked', JSON.stringify(likedMovies))
 
       }

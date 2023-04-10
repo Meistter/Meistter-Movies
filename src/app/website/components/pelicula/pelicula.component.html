@@ -7,7 +7,7 @@
     alt="Nombre de la película"
   />
   </a>
-  <button  class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>
+  <button [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'"  class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>
 </div>
 
 
