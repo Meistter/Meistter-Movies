@@ -1,14 +1,44 @@
-<mat-sidenav-container class="sidenav-container">
+<div class="sideMenuContainer">
+  <div class="one">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin/dashboard">
+        <mat-icon>bubble_chart</mat-icon> Dashboard</a>
+      <a mat-list-item routerLink="/admin/statistics"><mat-icon>store</mat-icon> Estadisticas</a>
+      <a mat-list-item routerLink="/admin"><mat-icon>category</mat-icon> Opiniones</a>
+      <a mat-list-item (click)="logout()"><mat-icon>login</mat-icon> Cerrar Sesión</a>
+    </mat-nav-list>
+
+  </div>
+
+
+  <div class="two">
+    <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-content>
+      <mat-toolbar class="nav">
+          <span>Meistter Movies | Administrator Panel</span>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+</div>
+<mat-sidenav-container class="sidenavMobile-container">
   <mat-sidenav
     #drawer
     class="sidenav"
     fixedInViewport>
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar> Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/admin">
-        <mat-icon>bubble_chart</mat-icon> Dashboard</a>
-      <a mat-list-item routerLink="/admin/"><mat-icon>store</mat-icon> Peliculas</a>
-      <a mat-list-item routerLink="/admin/"><mat-icon>category</mat-icon> Series</a>
+      <a mat-list-item routerLink="/admin"><mat-icon>bubble_chart</mat-icon> Dashboard</a>
+      <a mat-list-item routerLink="/admin/statistics"><mat-icon>store</mat-icon> Estadisticas</a>
+      <a mat-list-item routerLink="/admin"><mat-icon>category</mat-icon> Opiniones</a>
       <a mat-list-item (click)="logout()"> <mat-icon>login</mat-icon> Cerrar Sesión</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -17,29 +47,14 @@
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div class="organize">
-      <span>Meistter Movies | Admin Panel</span>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+
+      <span>Administrator Panel</span>
+      <div></div>
     </mat-toolbar>
 
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!-- <nav class="navbar bg-dark bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand">Meistter Movies | Panel Administrador</a>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<router-outlet></router-outlet> -->
 
 
 

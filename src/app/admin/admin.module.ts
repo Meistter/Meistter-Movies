@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
-import { HomeComponent } from './pages/home/home.component';
 import { MaterialModule } from './../material/material.module';
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 @NgModule({
   declarations: [
     LayoutComponent,
-    HomeComponent,
+    DashboardComponent,
+    StatisticsComponent
   ],
   imports: [
     CommonModule,

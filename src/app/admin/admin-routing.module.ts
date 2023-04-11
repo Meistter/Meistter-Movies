@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
-import { HomeComponent } from './pages/home/home.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 const routes: Routes = [
   {
     path: '',
@@ -10,12 +11,16 @@ const routes: Routes = [
       //* Aqui van las rutas hijas de este MODULO
       {
         path: 'dashboard',
-        component: HomeComponent
+        component: DashboardComponent
       },
       {
         path: '',
         redirectTo: 'dashboard', //!no ponemos el '/' ya que no es el root principal, esta es algo como una app secundaria
         pathMatch: 'full'
+      },
+      {
+        path: 'statistics',
+        component: StatisticsComponent
       },
 
     ]

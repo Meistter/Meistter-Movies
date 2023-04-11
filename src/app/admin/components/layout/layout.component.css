@@ -1,5 +1,39 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.sideMenuContainer{
+  display: grid;
+  grid-template-columns: 230px auto
+
+}
+.one{
+  background-color: whitesmoke
+
+}
 
 
+/* HASTA */
+@media (max-width: 920px)
+        {
+            .sidenav-container {
+              display: none;
+            }
+            .sideMenuContainer{
+              display: none;
+            }
+        }
+        /* DESDE */
+@media (min-width: 921px){
+          .sidenavMobile-container{
+            display: none;
+          }
+
+        }
+
+/* .sidenavMobile-container{
+display: none;
+} */
 .sidenav-container {
   height: 100%;
 }
@@ -26,4 +60,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.organize2{
+  display: flex;
+  align-items: center;
 }
