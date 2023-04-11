@@ -8,15 +8,14 @@
   --bodyBlue: #01111e;
   --border: rgb(42, 45, 51);
 }
-body{
-  margin: 0;
-  background-color: var(--bodyBlue) !important;
-  overflow-x: hidden;
-  color: white !important;
-}
+
 
 html, body { height: 100% !important; }
 body
 { margin: 0 !important;
    font-family: Roboto, "Helvetica Neue", sans-serif !important;
-  }
+   margin: 0;
+   background-color: var(--bodyBlue) !important;
+   overflow-x: hidden;
+   color: white !important;
+}

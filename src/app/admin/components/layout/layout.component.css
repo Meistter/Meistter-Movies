@@ -1,3 +1,5 @@
+
+
 .sidenav-container {
   height: 100%;
 }
@@ -18,4 +20,10 @@
 .nav{
   background-color: var(--navBlue);
   color: white;
+}
+.organize{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
