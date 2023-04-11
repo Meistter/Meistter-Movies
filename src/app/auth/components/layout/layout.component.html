@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav-content>
     <mat-toolbar class="nav container">
       <div>
@@ -13,9 +13,28 @@
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport>
+    <mat-toolbar>Menu</mat-toolbar>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="nav">
+      <div class="titles">
+        <mat-icon class="inicio" routerLink="/">arrow_back</mat-icon>
+        <span class="inicio" routerLink="/">Meistter Moviesㅤ</span>
+        <span> |ㅤAuthentication Panel</span>
+      </div>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-
-
 
 
 
