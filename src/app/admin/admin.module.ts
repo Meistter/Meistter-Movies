@@ -1,21 +1,29 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing.module';
-import { LayoutComponent } from './components/layout/layout.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MaterialModule } from './../material/material.module';
-import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { ComponentsModule } from './components/components.module';
+import { AppComponent } from './app.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+
 @NgModule({
-  declarations: [
-    LayoutComponent,
-    HomeComponent,
-  ],
   imports: [
-    CommonModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ComponentsModule,
+    RouterModule,
     AdminRoutingModule,
-    MaterialModule,
-    MatProgressBarModule
-  ]
+  ],
+  declarations: [
+    AppComponent,
+    AdminLayoutComponent,
+
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AdminModule { }

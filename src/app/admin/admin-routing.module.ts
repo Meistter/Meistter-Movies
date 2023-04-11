@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './components/layout/layout.component';
-import { HomeComponent } from './pages/home/home.component';
-const routes: Routes = [
+import { CommonModule, } from '@angular/common';
+import { BrowserModule  } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+
+const routes: Routes =[
   {
     path: '',
-    component: LayoutComponent,
-    children: [
-      //* Aqui van las rutas hijas de este MODULO
-      {
-        path: 'dashboard',
-        component: HomeComponent
-      },
-      {
-        path: '',
-        redirectTo: 'dashboard', //!no ponemos el '/' ya que no es el root principal, esta es algo como una app secundaria
-        pathMatch: 'full'
-      },
-
-    ]
-
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  }, {
+    path: '',
+    component: AdminLayoutComponent,
+    children: [{
+      path: '',
+      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+    }]
   }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes,{
+       useHash: true
+    })
+  ],
+  exports: [
+  ],
 })
 export class AdminRoutingModule { }
