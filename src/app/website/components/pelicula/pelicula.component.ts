@@ -30,6 +30,22 @@ export class PeliculaComponent {
   vote_count: 0
   } //estado inicial
 
+//Aqui agregaremos el boton rojo de like si lo consigue en el local storage
+ngOnInit(): void{
+  this.corazon = false
+  const likedMoviesSeries = localStorage.getItem('liked')
+  let likedMovies = []
+  if( likedMoviesSeries !== null){
+
+    likedMovies = JSON.parse(likedMoviesSeries)
+    // buscamos el elemento en el LS
+      const resultado = likedMovies.findIndex( (movie: { id: number; }) => movie.id === this.movie.id );
+    if (resultado !== -1){ //si es diferente de -1 significa que existe en LS por lo tanto le activamos el corazón
+      this.corazon = true
+    }
+  }
+}
+
 
   imgUrl = environment.IMG_BASE
   //! Cada Vez que hacemos click en favoritos debemos emitir una señal al componente favoritos para que este recargue la información
@@ -51,7 +67,7 @@ export class PeliculaComponent {
       likedMovies = JSON.parse(likedMoviesSeries)
 
       const resultado = likedMovies.findIndex( (movie: { id: number; }) => movie.id === this.movie.id );
-      console.log(resultado);
+
 
       //elimino
       if (resultado !== -1){

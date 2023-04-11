@@ -29,7 +29,21 @@ export class SerieComponent{
     vote_count: 0
     } //objeto serie de tipo Movie
 
+//Aqui agregaremos el boton rojo de like si lo consigue en el local storage
+ngOnInit(): void{
+  this.corazon = false
+  const likedMoviesSeries = localStorage.getItem('liked')
+  let likedMovies = []
+  if( likedMoviesSeries !== null){
 
+    likedMovies = JSON.parse(likedMoviesSeries)
+    // buscamos el elemento en el LS
+      const resultado = likedMovies.findIndex( (serie: { id: number; }) => serie.id === this.serie.id );
+    if (resultado !== -1){ //si es diferente de -1 significa que existe en LS por lo tanto le activamos el corazón
+      this.corazon = true
+    }
+  }
+}
     imgUrl = environment.IMG_BASE
 
     saveOrDeleteFromLS(){
