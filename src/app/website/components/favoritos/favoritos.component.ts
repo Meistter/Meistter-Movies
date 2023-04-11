@@ -12,6 +12,7 @@ export class FavoritosComponent implements OnInit{
 
   constructor(private comunicationService: ComunicationService){}
   movies: Movie[] = []
+  preMovies: Movie[] = [] //!Este array de pre movies lo usamos para guardar temporalmente el array para luego en el de movies picarlo y tomar solo los primeros 5 elementos y eso es lo q mandamos a renderizar
   likedMoviesSeries: string | null = null
   visualizar = false
   ngOnInit(){
@@ -27,7 +28,9 @@ export class FavoritosComponent implements OnInit{
 
     if(this.likedMoviesSeries !== null){
 
-      this.movies = JSON.parse(this.likedMoviesSeries)
+      this.preMovies = JSON.parse(this.likedMoviesSeries)
+      this.movies = this.preMovies.slice(0,5)
+
       if (this.movies.length>0){
         this.visualizar = true
       }

@@ -61,9 +61,13 @@ export class SerieComponent{
          }
          //añado
          if (resultado == -1){
-           likedMovies.push(this.serie)
-         this.corazon = true
-         localStorage.setItem('liked', JSON.stringify(likedMovies))
+
+
+          //  if (likedMovies.length < 5){
+            likedMovies.push(this.serie)
+            this.corazon = true
+            localStorage.setItem('liked', JSON.stringify(likedMovies))
+          //  }
          }
      }
      this.comunicationService.disparadorFavoritos.emit()

@@ -61,10 +61,13 @@ export class PeliculaComponent {
       }
       //añado
       if (resultado == -1){
+
+
+        // if (likedMovies.length < 5){
         likedMovies.push(this.movie)
       this.corazon = true
       localStorage.setItem('liked', JSON.stringify(likedMovies))
-
+        // }
       }
   }
 

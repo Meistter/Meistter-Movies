@@ -9,9 +9,7 @@ import { SeriesService } from 'src/app/services/series.service';
 })
 export class PeliculasComponent implements OnInit{
 
-  public transform(items: [], limit: number) {
-    return items.slice(0, limit);
-}
+
 
   datos: Datos = {
     page: 0,
