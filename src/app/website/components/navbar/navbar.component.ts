@@ -24,7 +24,7 @@ ngOnInit(): void {
 
 }
 
-  searchQuery(){
+  searchQuery(event: { preventDefault: () => void; }){
 
     //!Segundo metodo de busqueda con esto hacemos que la url cambie
     //  this.router.navigate(['./search'], { queryParams: { search: this.searchField.value } })
@@ -36,7 +36,7 @@ ngOnInit(): void {
     //ya aqui estamos obteniendo la informacion escrita en el input de busqueda
     //ahora enviamos como query param la información a la URL
 
-
+    event.preventDefault() //con esto hacemos que el boton no recargue la pagina ya que es tipo submit
     //! Primer metodo de busqueda, mas simple
    this.router.navigate(['/search'], { queryParams: { search: this.searchField.value } })
     //!

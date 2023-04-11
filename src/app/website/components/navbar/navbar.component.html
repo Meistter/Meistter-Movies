@@ -1,15 +1,13 @@
 <mat-toolbar class="navbar">
   <div class="navbarlogo">
-
   <a class="nombre" routerLink="home">meistter Movies</a>
   </div>
 <!-- !A partir de ahora usaremos formularios de angular Forms -->
-  <div #searchForm class="search">
-      <input #busqueda [formControl]="searchField" type="search" placeholder="Series y Peliculas" />
-
-      <button id="searchbtn" class="srchbtn" (click)="searchQuery()">Buscar</button>
+  <form class="searchForm" (submit)="searchQuery($event)">
+      <input class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
+      <button mat-stroked-button id="searchbtn" class="srchbtn" type="submit">Buscar</button>
       <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
-    </div>
+    </form>
       <div class="navbar-menu">
           <ul>
             <li>
@@ -22,10 +20,10 @@
                 <a routerLink="series">Series</a>
             </li>
             <li>
-              <a>Contacto</a>
+                <a>Contacto</a>
             </li>
             <li>
-              <a routerLink="/auth/login">Administrador</a>
+                <a routerLink="/auth/login">Administrador</a>
             </li>
           </ul>
       </div>
