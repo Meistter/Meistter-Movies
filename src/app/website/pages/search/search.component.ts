@@ -11,6 +11,15 @@ import { SearchService } from 'src/app/services/search.service';
 export class SearchComponent implements OnInit {
 
   constructor(private searchService: SearchService, private route: ActivatedRoute){}
+
+  finishPage = 0;
+  actualPage: number = 1;
+  onScroll() {
+    if (this.actualPage < this.finishPage) {
+      this.loadMore();
+      this.actualPage ++;
+    }
+  }
   searchQuery: any
   //! esto es del segundo metodo de busqueda(ENVIANDO INFORMACION ENTRE MODULOS A TRAVES DE UN SERVICIO CON UN OBSERBABLE)
   // datos: any
@@ -33,7 +42,7 @@ export class SearchComponent implements OnInit {
 
     this.route.queryParamMap.subscribe(params => {
       this.searchQuery = params.get('search'),
-        this.searchService.searchPaginated(this.searchQuery, false).subscribe(data=>{this.resultados = data.results})
+        this.searchService.searchPaginated(this.searchQuery, false).subscribe(data=>{this.finishPage = data.total_pages,this.resultados = data.results})
                                                   // con este false estamos diciendo que no es paginacion, es busqueda inicial
 
     })

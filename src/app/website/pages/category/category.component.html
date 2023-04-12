@@ -2,10 +2,9 @@
   <h1>{{nombre}}</h1>
 </div>
 
-<div class="mainContainer">
+<div class="mainContainer" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()">
   <app-pelicula [movie]="movie" *ngFor="let movie of resultados"></app-pelicula>
 
 </div>
-<button (click)="loadMore()">Cargar Más</button>
 
 

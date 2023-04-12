@@ -14,6 +14,15 @@ export class CategoryComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private categoriasService: CategoriasService){}
 
+  finishPage = 0;
+  actualPage: number = 1;
+  onScroll() {
+    if (this.actualPage < this.finishPage) {
+      this.loadMore();
+      this.actualPage ++;
+    }
+  }
+
   nombre = 'Nombre Categoria'
   result: any = {}
 
@@ -42,7 +51,7 @@ export class CategoryComponent implements OnInit{
       })
 
       if (this.categoryId){
-        this.categoriasService.getCategoryById(this.categoryId, this.page).subscribe(data=>{this.datos = data, this.resultados = this.datos.results})
+        this.categoriasService.getCategoryById(this.categoryId, this.page).subscribe(data=>{this.finishPage = data.total_pages,this.datos = data, this.resultados = this.datos.results})
      }
 
      //Buscamos el nombre de la categoria

@@ -23,6 +23,7 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../material/material.module';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -50,7 +51,8 @@ import { MaterialModule } from './../material/material.module';
     WebsiteRoutingModule,
     QuicklinkModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    InfiniteScrollModule
   ]
 })
 export class WebsiteModule { }
