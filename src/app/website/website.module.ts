@@ -24,6 +24,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../material/material.module';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -52,7 +53,8 @@ import {InfiniteScrollModule} from 'ngx-infinite-scroll';
     QuicklinkModule,
     ReactiveFormsModule,
     MaterialModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxSkeletonLoaderModule
   ]
 })
 export class WebsiteModule { }

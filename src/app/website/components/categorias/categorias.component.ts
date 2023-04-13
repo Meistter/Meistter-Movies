@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CatObj } from 'src/app/models/caterogias';
+import { Categoria, CatObj } from 'src/app/models/caterogias';
 import { CategoriasService } from 'src/app/services/categorias.service';
 
 @Component({
@@ -11,11 +11,11 @@ export class CategoriasComponent {
   constructor(private categoriasService: CategoriasService){}
 
   //en este objeto almacenamos la respuesta de la api
-  catObj: CatObj = {
-    genres : []
-  }
+  genres: Categoria[] = [
+    {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}
+]
 
   ngOnInit(): void{
-    this.categoriasService.getCategories().subscribe(data=>{this.catObj=data})
+    this.categoriasService.getCategories().subscribe(data=>{this.genres=data.genres})
   }
 }

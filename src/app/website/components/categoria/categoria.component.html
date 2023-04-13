@@ -1,2 +1,15 @@
-<a class="box" [routerLink]="['/category', categoria.id]">{{categoria.name}}</a>
+  <!--? Skeleton loading -->
+<!-- le decimos que el id sea = -1 solo porq sabemos que cuando ese sea el id es porq esta leyendo el valor por defecto que le estamos entregando y porq sabemos que un id nunca sera -1 -->
+<ngx-skeleton-loader *ngIf="categoria.id == -1" [theme]="{
+  'background-color': '#ced1d5'
+
+  }"
+  count="1"
+  appearance="circle"
+  animation="pulse"
+  ></ngx-skeleton-loader>
+
+
+
+<a class="box" *ngIf="categoria.id !== -1" [routerLink]="['/category', categoria.id]">{{categoria.name}}</a>
 
