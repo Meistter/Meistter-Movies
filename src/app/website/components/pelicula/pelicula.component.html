@@ -19,7 +19,7 @@
   <img *ngIf="movie.id !== -1"
     class="img"
     src={{imgUrl}}{{movie.poster_path}}
-
+    alt={{movie.title}}
   />
   </a>
   <button [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'"  class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>

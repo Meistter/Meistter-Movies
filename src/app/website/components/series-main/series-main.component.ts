@@ -33,7 +33,7 @@ export class SeriesMainComponent implements OnInit{
   ] //tiparlo
 
   ngOnInit(): void{
-    this.seriesService.getSeriesMainPaginated().subscribe(data=>{this.datos = data, this.finishPage = data.total_pages, this.resultados = [...this.resultados, ...this.datos.results]}) //concatenamos
+    this.seriesService.getSeriesMainPaginated().subscribe(data=>{this.datos = data, this.finishPage = data.total_pages, this.resultados =this.datos.results}) //concatenamos
 
 
   }

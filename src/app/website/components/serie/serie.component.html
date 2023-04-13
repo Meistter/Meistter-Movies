@@ -16,7 +16,7 @@
 <img *ngIf="serie.id !== -1"
 class="img"
 src={{imgUrl}}{{serie.poster_path}}
-
+alt={{serie.title}}
 />
   </a>
   <button [ngClass]="corazon == true ? 'serie-like-btn--liked' : 'serie-like-btn'"  class="serie-like-btn" (click)="saveOrDeleteFromLS()"></button>
