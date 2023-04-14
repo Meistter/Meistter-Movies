@@ -1,10 +1,13 @@
 .sidenav-container {
   height: 100%;
 }
-
+.sidenavMobile-container{
+  height: 100%;
+}
 .sidenav {
   width: 200px;
 }
+
 
 .sidenav .mat-toolbar {
   background: inherit;
@@ -28,6 +31,12 @@
   align-items: center;
 
 }
+.titlesMobile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 .menu{
   cursor: pointer;
   margin-right: 15px;
@@ -37,3 +46,16 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
+@media (max-width: 1050px)
+        {
+            .sidenav-container{
+              display: none;
+            }
+        }
+        /* DESDE */
+@media (min-width: 1051px){
+          .sidenavMobile-container{
+            display: none;
+          }
+
+        }

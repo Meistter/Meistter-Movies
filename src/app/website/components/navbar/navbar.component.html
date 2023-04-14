@@ -20,11 +20,41 @@
                 <a routerLink="series">Series</a>
             </li>
             <li>
-                <a>Contacto</a>
-            </li>
-            <li>
                 <a routerLink="/auth/login">Iniciar Sesión</a>
             </li>
           </ul>
       </div>
 </mat-toolbar>
+<mat-sidenav-container class="sidenavMobile-container">
+<mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport>
+    <mat-toolbar> Menu</mat-toolbar>
+    <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
+      <form class="searchForm" (submit)="searchQuery($event)">
+        <input style="width: 160px;" class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
+        <button mat-stroked-button id="searchbtn" class="srchbtn" type="submit">🔍</button>
+      </form>
+      <a mat-list-item routerLink="home"><mat-icon>store</mat-icon> Inicio</a>
+      <a mat-list-item routerLink="movies"><mat-icon>category</mat-icon> Peliculas</a>
+      <a mat-list-item routerLink="series"><mat-icon>category</mat-icon> Series</a>
+      <a mat-list-item routerLink="/auth/login"> <mat-icon>login</mat-icon> Iniciar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+<mat-toolbar class="navbarMobile">
+  <button type="button" style="color:white;" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="navbarMobilelogo">
+  <a class="nombre" routerLink="home">meistter Movies</a>
+  </div>
+
+
+  <div></div>
+
+
+</mat-toolbar>
+</mat-sidenav-content>
+</mat-sidenav-container>

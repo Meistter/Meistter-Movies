@@ -14,3 +14,16 @@ footer{
 footer a{
  color: rgb(233, 205, 49);
 }
+@media (max-width: 1050px)
+        {
+            .footer{
+              display: none;
+            }
+        }
+        /* DESDE */
+@media (min-width: 1051px){
+          .footerMobile{
+            display: none;
+          }
+
+        }

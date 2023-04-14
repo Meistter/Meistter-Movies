@@ -5,10 +5,25 @@
   background-color: var(--navBlue);
   /* height: 56px; */
 }
+.navbarMobile{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: var(--navBlue);
+}
 .navbarlogo{
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
+}
+.navbarMobilelogo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-family: Domine;
+  text-decoration: none;
+  color: var(--white);
 }
 .navbarlogo a{
 font-size: 26px;
@@ -60,3 +75,20 @@ font-size: medium;
 .srchbtn{
   background-color: white;
 }
+.sidenav{
+  width: 250px;
+}
+/* HASTA */
+@media (max-width: 1050px)
+        {
+            .navbar{
+              display: none;
+            }
+        }
+        /* DESDE */
+@media (min-width: 1051px){
+          .navbarMobile{
+            display: none;
+          }
+
+        }
