@@ -37,12 +37,12 @@
     <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
       <form class="searchForm" (submit)="searchQuery($event)">
         <input style="width: 160px;" class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
-        <button mat-stroked-button id="searchbtn" class="srchbtn" type="submit">🔍</button>
+        <button (click)="drawer.toggle()" mat-stroked-button id="searchbtn" class="srchbtn" type="submit">🔍</button>
       </form>
-      <a mat-list-item routerLink="home"><mat-icon>store</mat-icon> Inicio</a>
-      <a mat-list-item routerLink="movies"><mat-icon>category</mat-icon> Peliculas</a>
-      <a mat-list-item routerLink="series"><mat-icon>category</mat-icon> Series</a>
-      <a mat-list-item routerLink="/auth/login"> <mat-icon>login</mat-icon> Iniciar Sesión</a>
+      <a mat-list-item routerLink="home" (click)="drawer.toggle()"><mat-icon>store</mat-icon> Inicio</a>
+      <a mat-list-item routerLink="movies" (click)="drawer.toggle()"><mat-icon>category</mat-icon> Peliculas</a>
+      <a mat-list-item routerLink="series" (click)="drawer.toggle()"><mat-icon>category</mat-icon> Series</a>
+      <a mat-list-item routerLink="/auth/login" (click)="drawer.toggle()"> <mat-icon>login</mat-icon> Iniciar Sesión</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

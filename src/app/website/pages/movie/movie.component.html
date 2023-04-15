@@ -21,13 +21,13 @@
     <div class="descripcion">
       <p>{{pelicula.overview}}</p>
     </div>
-    <div *ngIf="generos[0].id">
+    <!-- <div *ngIf="generos[0].id"> -->
           <div class="generos">
             <p>Generos</p>
           </div>
           <div class="categorias">
             <app-categoria style="padding: 15px;" [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
-          </div>
+          <!-- </div> -->
     </div>
   </div>
 </div>

@@ -36,13 +36,14 @@ export class MovieComponent implements OnInit{
 
       //ahora consultamos a la API
       if(this.movieId){
-      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data, this.generos = data.genres, console.log(this.generos);
-
-      })
-      }
+      this.peliculasService.getMovie(this.movieId).subscribe(data=>{this.pelicula = data, this.generos = data.genres})}
       //peliculas relacionadas
       if(this.movieId){
-        this.peliculasService.getRelated(this.movieId).subscribe(data=>{this.datos = data, this.peliculas = this.datos.results.slice(0,8)})
+        this.peliculasService.getRelated(this.movieId).subscribe(data=>{
+          if (data.total_pages > 0){
+            this.datos = data, this.peliculas = this.datos.results.slice(0,8)}
+          }
+         )
       }
     })
   }

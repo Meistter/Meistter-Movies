@@ -25,20 +25,23 @@ export class SeriepComponent {
   ]
   generos: any = []
   serieId: string | null = null
+
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params=>{
       this.serieId = params.get('id')
-      console.log(this.serieId);
 
       //ahora consultamos a la API
       if(this.serieId){
       this.seriesService.getSerie(this.serieId).subscribe(data=>{this.serie = data, this.generos = data.genres;
-      })
-      //peliculas relacionadas
+      })}
+
       if(this.serieId){
-        this.seriesService.getRelated(this.serieId).subscribe(data=>{this.datos = data, this.series = this.datos.results.slice(0,8)})
-      }
-      }
-    })
-  }
-}
+        this.seriesService.getRelated(this.serieId).subscribe(data=>{
+          if (data.total_pages > 0){
+            this.datos = data, this.series = this.datos.results.slice(0,8)
+          }}
+          )}
+   })
+
+ }}

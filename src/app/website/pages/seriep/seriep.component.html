@@ -21,11 +21,11 @@
     <div class="generos">
       <p>Generos</p>
     </div>
-    <div *ngIf="generos[0].id">
+    <!-- <div *ngIf="generos[0].id"> -->
     <div class="categorias">
       <app-categoria [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
     </div>
-  </div>
+  <!-- </div> -->
   </div>
 </div>
 <div *ngIf="series[0].id != -1">
