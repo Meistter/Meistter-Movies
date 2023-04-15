@@ -77,6 +77,7 @@ font-size: medium;
 }
 .sidenav{
   width: 250px;
+  z-index: 999;
 }
 /* HASTA */
 @media (max-width: 1050px)
