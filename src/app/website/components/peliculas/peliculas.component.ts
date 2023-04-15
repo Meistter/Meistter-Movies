@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { Datos, Movie } from 'src/app/models/movie';
 import { SeriesService } from 'src/app/services/series.service';
 @Component({
   selector: 'app-peliculas',
   templateUrl: './peliculas.component.html',
-  styleUrls: ['./peliculas.component.css']
+  styleUrls: ['./peliculas.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom   //esto es ViewEncapsulation lo usamos para modificar desde el padre el CSS del hijo
 })
 export class PeliculasComponent implements OnInit{
 

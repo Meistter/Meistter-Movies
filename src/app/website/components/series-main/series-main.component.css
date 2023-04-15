@@ -8,12 +8,32 @@
   margin: 30px;
 }
 .serie-container img{
-  width: 240px !important;
-  height: 340px !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 body{
   margin: 0;
   background-color: var(--bodyBlue) !important;
   overflow-x: hidden;
   color: white !important;
+}
+@media (max-width: 1300px){
+  .mainContainer{
+    grid-template-columns: auto auto auto auto !important;
+  }
+}
+@media (max-width: 1060px){
+  .mainContainer{
+    grid-template-columns: auto auto auto !important;
+  }
+}
+@media (max-width: 860px){
+  .mainContainer{
+    grid-template-columns: auto auto !important;
+  }
+}
+@media (max-width: 600px){
+  .mainContainer{
+    grid-template-columns: auto !important;
+  }
 }

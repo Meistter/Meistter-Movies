@@ -22,3 +22,38 @@
   border-color: white !important;
 }
 body{  background-color: var(#01111e) !important;}
+
+@media (max-width: 1050px){
+  .contenedor{
+    display: none;
+  }
+
+}
+        /* DESDE */
+@media (min-width: 1051px){
+    .contenedorMobile{
+      display: none;
+   }
+ }
+
+ .main-moviesListMobile{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 30px;
+}
+
+@media (max-width: 890px){
+  .main-moviesListMobile{
+    grid-template-columns: auto auto auto !important;
+  }
+}
+@media (max-width: 800px){
+  .main-moviesListMobile{
+    grid-template-columns: auto auto !important;
+  }
+}
+@media (max-width: 600px){
+  .main-moviesListMobile{
+    grid-template-columns: auto !important;
+  }
+}

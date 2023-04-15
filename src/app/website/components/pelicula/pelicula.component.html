@@ -1,29 +1,17 @@
 <div class="superContainer">
-
-<div class="movie-container">
-
-  <a [routerLink]="['/movie',movie.id]">
-
-     <!--? Skeleton loading -->
-<!-- le decimos que el id sea = -1 solo porq sabemos que cuando ese sea el id es porq esta leyendo el valor por defecto que le estamos entregando y porq sabemos que un id nunca sera -1 -->
-    <ngx-skeleton-loader *ngIf="movie.id == -1" [theme]="{
+  <div class="movie-container">
+    <a [routerLink]="['/movie',movie.id]">
+      <!--? Skeleton loading -->
+      <!-- le decimos que el id sea = -1 solo porq sabemos que cuando ese sea el id es porq esta leyendo el valor por defecto que le estamos entregando y porq sabemos que un id nunca sera -1 -->
+      <ngx-skeleton-loader *ngIf="movie.id == -1" [theme]="{
       'background-color': '#ced1d5',
       width: '155px',
       height: '225px'
-      }"
-      count="1"
-      appearance="line"
-      animation="pulse"
-      ></ngx-skeleton-loader>
+      }" count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
 
-  <img *ngIf="movie.id !== -1"
-    class="img"
-    src={{imgUrl}}{{movie.poster_path}}
-    alt={{movie.title}}
-  />
-  </a>
-  <button [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'"  class="movie-like-btn" (click)="saveOrDeleteFromLS()"></button>
-</div>
-
-
+      <img *ngIf="movie.id !== -1" class="img" src={{imgUrl}}{{movie.poster_path}} alt={{movie.title}} />
+    </a>
+    <button [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'" class="movie-like-btn"
+      (click)="saveOrDeleteFromLS()"></button>
+  </div>
 </div>

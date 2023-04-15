@@ -9,3 +9,31 @@
 .space{
   margin-top: 40px;
 }
+
+
+
+
+@media (max-width: 1305px){
+    .categoriesContainer{
+      display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto !important;
+   }
+ }
+ @media (max-width: 1050px){
+  .categoriesContainer{
+    display: grid;
+  grid-template-columns: auto auto auto auto auto  !important;
+ }
+}
+@media (max-width: 785px){
+  .categoriesContainer{
+    grid-template-columns: auto auto auto auto !important;
+  }
+}
+@media (max-width: 600px){
+  .categoriesContainer{
+    grid-template-columns: 1fr !important;
+
+  }
+}
+
