@@ -2,32 +2,35 @@
   <img src="{{imgurl}}{{serie.poster_path}}" alt="">
 </div>
 
-<body class="headerContainer" background="{{imgurl}}{{serie.poster_path}}">
-
-</body>
-<div class="contenidoContainer">
- <div class="contenido">
-   <div class="titulo">
-    <p>{{serie.name}}</p>
-     <p>{{serie.vote_average}}</p>
-   </div>
-   <div class="fecha">
-    <p>Fecha de Estreno: {{serie.first_air_date}}</p>
-    <p>Pais de Origen: {{serie.origin_country}}</p>
-  </div>
-  <div class="descripcion">
-    <p>{{serie.overview}}</p>
-  </div>
-  <div class="generos">
-    <p>Generos</p>
-  </div>
-  <div class="categorias">
-    <app-categoria [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
-  </div>
-
- </div>
-
+<div class="headerContainer">
+  <img  src="{{imgurl}}{{serie.poster_path}}" alt="">
 </div>
-<div class="container">
-  <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
+<div class="contenidoContainer">
+  <div class="contenido">
+    <div class="titulo">
+      <p>{{serie.name}}</p>
+       <p>{{serie.vote_average}}</p>
+     </div>
+     <div class="fecha">
+      <p>Fecha de Estreno: {{serie.first_air_date}}</p>
+      <p>Pais de Origen: {{serie.origin_country}}</p>
+    </div>
+    <div class="descripcion">
+      <p>{{serie.overview}}</p>
+    </div>
+    <div class="generos">
+      <p>Generos</p>
+    </div>
+    <div *ngIf="generos[0].id">
+    <div class="categorias">
+      <app-categoria [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
+    </div>
   </div>
+  </div>
+</div>
+<div *ngIf="series[0].id != -1">
+<p class="relacionadas">Series Relacionadas</p>
+<div class="contenedor" >
+  <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
+</div>
+</div>
