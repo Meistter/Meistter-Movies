@@ -30,7 +30,10 @@
     #drawer
     class="sidenav"
     fixedInViewport>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
     <mat-toolbar> Menu</mat-toolbar>
+    <mat-icon style="margin-right: 15px;" type="button" (click)="drawer.toggle()">arrow_back</mat-icon>
+    </div>
     <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
       <form class="searchForm" (submit)="searchQuery($event)">
         <input style="width: 160px;" class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
