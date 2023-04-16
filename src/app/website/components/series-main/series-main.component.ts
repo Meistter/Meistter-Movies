@@ -17,7 +17,6 @@ export class SeriesMainComponent implements OnInit{
     if (this.actualPage < this.finishPage) {
       this.loadMore();
       this.actualPage ++;
-
     }
   }
 
@@ -33,13 +32,13 @@ export class SeriesMainComponent implements OnInit{
   ] //tiparlo
 
   ngOnInit(): void{
-    this.seriesService.getSeriesMainPaginated().subscribe(data=>{this.datos = data, this.finishPage = data.total_pages, this.resultados =this.datos.results}) //concatenamos
-
+    this.seriesService.getSeriesMainPaginated(this.actualPage).subscribe(data=>{this.datos = data, this.finishPage = data.total_pages, this.resultados =this.datos.results}) //concatenamos
+    this.actualPage++
 
   }
   //View Encapsulation
 
   loadMore(){
-    this.seriesService.getSeriesMainPaginated().subscribe(data=>{this.datos = data, this.resultados = [...this.resultados, ...this.datos.results]}) //concatenamos
+    this.seriesService.getSeriesMainPaginated(this.actualPage).subscribe(data=>{this.datos = data, this.resultados = [...this.resultados, ...this.datos.results]}) //concatenamos
   }
 }

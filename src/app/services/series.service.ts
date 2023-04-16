@@ -27,12 +27,12 @@ export class SeriesService {
 
   }
 
-  getSeriesMainPaginated(){
+  getSeriesMainPaginated(page : number){
 
     //validar que no paginemos mas de la cantidad de paginas que trae la api
-  this.page++;
+  // this.page++;
 
-  return this.http.get<Datos>(this.API, {params: {page: this.page}})
+  return this.http.get<Datos>(this.API, {params: {page: page}})
 
 
   }
