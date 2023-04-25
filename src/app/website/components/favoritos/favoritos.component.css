@@ -24,7 +24,11 @@
 
 }
 
-
+@media (max-width: 1295px){
+  .favoritos-container{
+    grid-template-columns: auto auto auto auto !important;
+  }
+}
 @media (max-width: 1040px){
   .favoritos-container{
     grid-template-columns: auto auto auto !important;
