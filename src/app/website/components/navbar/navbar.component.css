@@ -16,14 +16,21 @@
   justify-content: space-between;
   margin-left: 20px;
 }
+.logo{
+  width: 65px;
+  height: 63px;
+}
 .navbarMobilelogo a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   font-size: 26px;
   font-family: Domine;
   text-decoration: none;
   color: var(--white);
+  margin-left: 10px;
+}
+.navbarMobilelogo{
+  display: flex;
+  align-items: center;
 }
 .navbarlogo a{
 font-size: 26px;
@@ -76,18 +83,18 @@ font-size: medium;
   background-color: white;
 }
 .sidenav{
-  width: 250px;
+  width: 60%;
   z-index: 999;
 }
 /* HASTA */
-@media (max-width: 1050px)
+@media (max-width: 1150px)
         {
             .navbar{
               display: none;
             }
         }
         /* DESDE */
-@media (min-width: 1051px){
+@media (min-width: 1151px){
           .navbarMobile{
             display: none;
           }
