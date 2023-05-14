@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { SearchService } from '../../../services/search.service';
 
@@ -12,7 +12,7 @@ import { SearchService } from '../../../services/search.service';
 export class NavbarComponent {
   constructor(private router: Router, private searchService: SearchService){}
 
-  searchField = new FormControl
+  searchField = new FormControl('',[Validators.required])
 // Creo el formulario
   results= []
 ngOnInit(): void {
@@ -35,11 +35,14 @@ ngOnInit(): void {
 
     //ya aqui estamos obteniendo la informacion escrita en el input de busqueda
     //ahora enviamos como query param la información a la URL
-
+    
     event.preventDefault() //con esto hacemos que el boton no recargue la pagina ya que es tipo submit
     //! Primer metodo de busqueda, mas simple
+
+    if (this.searchField.valid){
    this.router.navigate(['/search'], { queryParams: { search: this.searchField.value } })
     //!
+  }
   }
 
 
