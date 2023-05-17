@@ -1,6 +1,6 @@
 <mat-toolbar class="navbar">
   <div class="navbarlogo">
-  <img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt="">
+  <a routerLink="home" style="margin: 0;"><img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt=""></a>
   <a class="nombre" routerLink="home">meistter Movies</a>
   </div>
   
@@ -39,8 +39,8 @@
     <mat-icon style="margin-right: 15px;" type="button" (click)="drawer.toggle()">arrow_back</mat-icon>
     </div>
     <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
-      <form class="searchForm" (submit)="searchQuery($event)">
-        <input style="width: 160px;" class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
+      <form class="mobileSearchForm" (submit)="searchQuery($event)">
+        <input class="mobileSearchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
         <button (click)="drawer.toggle()" mat-stroked-button id="searchbtn" class="srchbtn" type="submit">🔍</button>
       </form>
       <a mat-list-item routerLink="home" (click)="drawer.toggle()"><mat-icon>store</mat-icon> Inicio</a>
@@ -55,7 +55,7 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <div class="navbarMobilelogo">
-  <img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt="">
+  <a routerLink="home" style="margin: 0;"> <img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt=""></a>
   <a class="nombre" routerLink="home">meistter Movies</a>
   </div>
 
