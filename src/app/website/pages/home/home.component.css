@@ -1,0 +1,11 @@
+.home-container {   
+    padding-bottom: 48px;   
+    /* height: 100%;  */
+}
+.header-background {
+    /* background-color: red; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    max-height: 500px;
+    width: 100%;
+}

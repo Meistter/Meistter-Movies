@@ -1,0 +1,15 @@
+.layout__container {
+    position: relative;
+    width: 100%;
+}
+.navbar_content { 
+    position: absolute;
+    /* top: -18px; */
+    width: 100%;
+}
+.footer_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
