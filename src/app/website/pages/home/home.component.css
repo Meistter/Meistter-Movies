@@ -2,10 +2,10 @@
     padding-bottom: 48px;   
     /* height: 100%;  */
 }
-.header-background {
-    /* background-color: red; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    max-height: 500px;
+.header-background {   
+    /* max-height: 500px; */
     width: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    height: 100vh;
 }

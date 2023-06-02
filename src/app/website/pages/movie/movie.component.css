@@ -4,9 +4,9 @@
   position: absolute;
   filter: blur(7px);
   z-index: -1;
-  top: 50px;
+  top: 0px;
   width:100%;
-  margin-top: 9px;
+  /* margin-top: 9px; */
   background-image:  background="{{imgurl}}{{pelicula.poster_path}}";
 }
 .headerContainer img{
@@ -17,7 +17,8 @@
 .header{
   z-index: 0;
   position: relative ;
-  height: 580px;
+  height: 480px;
+  top: 140px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -50,7 +51,7 @@
   align-items: center;
   justify-content: space-between;
   height: 20px;
-  margin-top: 60px;
+  margin-top: 140px;
 }
 .titulo p:nth-child(1){
   font-family: Domine;
