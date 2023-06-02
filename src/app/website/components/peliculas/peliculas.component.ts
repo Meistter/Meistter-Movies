@@ -37,10 +37,10 @@ export class PeliculasComponent implements OnInit{
 
 
     this.peliculasService.getTrendingMovies()
-      .subscribe(data=>{this.datos = data, this.peliculas = this.datos.results.slice(0,8) //guardamos en un nuevo array solo con 7 elementos
+      .subscribe(data=>{this.datos = data, this.peliculas = this.datos.results.slice(0,6) //guardamos en un nuevo array solo con 7 elementos
       })
       // Array de series
-    this.seriesService.getTrendingSeries().subscribe(data=>{this.datosSeries = data, this.series = this.datosSeries.results.slice(0,8)})
+    this.seriesService.getTrendingSeries().subscribe(data=>{this.datosSeries = data, this.series = this.datosSeries.results.slice(0,6)})
   }
 
 

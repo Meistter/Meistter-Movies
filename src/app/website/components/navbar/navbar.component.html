@@ -2,15 +2,13 @@
   <div class="navbarlogo">
   <a routerLink="home" style="margin: 0;"><img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt=""></a>
   <a class="nombre" routerLink="home">meistter</a>
-  </div>
-  
-<!-- !A partir de ahora usaremos formularios de angular Forms -->
+  </div>  
   <form class="searchForm" (submit)="searchQuery($event)">
       <input class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
       <button mat-stroked-button id="searchbtn" class="srchbtn" type="submit">Buscar</button>
       <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
   </form>
-      <div class="navbar-menu">
+  <div class="navbar-menu">
           <ul>
             <li>
                 <a routerLink="home">Inicio</a>
@@ -25,15 +23,22 @@
                 <a routerLink="/auth/login">Iniciar Sesión</a>
             </li>
           </ul>
-      </div>
+  </div>
 </mat-toolbar>
 
+<mat-toolbar class="navbarMobile">
+  <button type="button" style="color:white; text-shadow: 1px 1px 3px black;" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="navbarMobilelogo">
+  <a routerLink="home" style="margin: 0;"> <img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt=""></a>
+  <a class="nombre" routerLink="home">meistter</a>
+  </div>
+  <div></div>
+</mat-toolbar>
 
 <mat-sidenav-container class="sidenavMobile-container">
-<mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport>
+<mat-sidenav #drawer class="sidenav" fixedInViewport>
     <div style="display: flex; align-items: center; justify-content: space-between;">
     <mat-toolbar> Menu</mat-toolbar>
     <mat-icon style="margin-right: 15px;" type="button" (click)="drawer.toggle()">arrow_back</mat-icon>
@@ -49,22 +54,9 @@
       <a mat-list-item routerLink="/auth/login" (click)="drawer.toggle()"> <mat-icon>login</mat-icon> Iniciar Sesión</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    
-<mat-toolbar class="navbarMobile">
-  <button type="button" style="color:white;" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-  </button>
-  <div class="navbarMobilelogo">
-  <a routerLink="home" style="margin: 0;"> <img class="logo" src="https://i.ibb.co/XfPB72k/OIG-fotor-bg-remover-20230516163126.png" alt=""></a>
-  <a class="nombre" routerLink="home">meistter</a>
-  </div>
 
+  <mat-sidenav-content>    
 
-  <div></div>
-
-
-</mat-toolbar>
-</mat-sidenav-content>
+  </mat-sidenav-content>
 
 </mat-sidenav-container>

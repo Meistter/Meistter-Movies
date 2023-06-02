@@ -1,6 +1,7 @@
 .movie-container{
   margin-right: 10px;
   margin-bottom: 30px;
+  position: relative;
 }
 .movie-container img{
   width: 100%;
@@ -9,6 +10,9 @@
   cursor: pointer;
 }
 .movie-like-btn{
+  position: absolute;
+  top: 5px;
+  right: -28px;
   background-color: var(--navBlue);
   margin-right: 30px;
   border-radius: 30px;
