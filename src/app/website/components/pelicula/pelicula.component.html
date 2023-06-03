@@ -1,4 +1,4 @@
-<div class="superContainer">
+
   <div class="movie-container">
     <a [routerLink]="['/movie',movie.id]">
       <!--? Skeleton loading -->
@@ -14,4 +14,4 @@
     <button [ngClass]="corazon == true ? 'movie-like-btn--liked' : 'movie-like-btn'" class="movie-like-btn"
       (click)="saveOrDeleteFromLS()"></button>
   </div>
-</div>
+

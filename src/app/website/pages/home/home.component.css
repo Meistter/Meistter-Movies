@@ -6,6 +6,6 @@
     /* max-height: 500px; */
     width: 100%;
     object-fit: cover;
-    filter: blur(3px);
+    /* filter: blur(3px); */
     height: 100vh;
 }
