@@ -1,4 +1,5 @@
 .box{
+  position: relative;
   color: white;
   border: solid;
   border-radius: 8px;
@@ -12,4 +13,24 @@
   justify-content: center;
   margin-right: 20px;
 }
+.box-cont {
+  
+  margin: 5px;
+  height: 360px;
+  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.background {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.titulo {
+  position: absolute;
+  font-family: "Lato";
+  color: white;
 
+}

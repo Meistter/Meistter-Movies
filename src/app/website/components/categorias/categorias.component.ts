@@ -14,8 +14,10 @@ export class CategoriasComponent {
   genres: Categoria[] = [
     {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}, {id:-1,name:''}
 ]
-
+  backgroundImage = []
   ngOnInit(): void{
     this.categoriasService.getCategories().subscribe(data=>{this.genres=data.genres})
+    // Buscamos imagenes para llenar nuestro array y mostrar en caterogias
+    // this.categoriasService.getCategoryById('12',1).subscribe(data=>{this.backgroundImage = data.results, console.log(this.backgroundImage)})
   }
 }

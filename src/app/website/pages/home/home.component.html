@@ -1,5 +1,10 @@
-<div class="home-container">
-    <img class="header-background" [src]="headerBackground">
+<div class="home-container">   
+    <div class="header-cont">
+        <img class="header-background" [src]="headerBackground">
+        <button class="watch-now">Ver ahora</button>    
+        <h1 class="movie-title">{{movieTitle}}</h1>
+        <h1 class="popular">Popular</h1>
+    </div> 
     <app-peliculas ></app-peliculas>
     <app-favoritos></app-favoritos>
     <app-categorias></app-categorias>

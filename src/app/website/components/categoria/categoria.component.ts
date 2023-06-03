@@ -11,4 +11,10 @@ export class CategoriaComponent {
     id: 0,
     name: ''
   }
+  @Input() backgroundImage = []
+  
+  ngOnInit(): void{
+  
+    
+  }
 }
