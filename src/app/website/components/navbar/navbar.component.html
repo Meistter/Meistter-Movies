@@ -46,7 +46,8 @@
     <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
       <form class="mobileSearchForm" (submit)="searchQuery($event)">
         <input class="mobileSearchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
-        <button (click)="drawer.toggle()" mat-stroked-button id="searchbtn" class="srchbtn" type="submit">🔍</button>
+        <button (click)="drawer.toggle()" id="searchbtn" class="srchbtn--mobile" type="submit"><span class="material-symbols-outlined">search</span></button>
+        <!-- <button (click)="drawer.toggle()" id="searchbtn" class="srchbtn" type="submit"></button> -->
       </form>
       <a mat-list-item routerLink="home" (click)="drawer.toggle()"><mat-icon>store</mat-icon> Inicio</a>
       <a mat-list-item routerLink="movies" (click)="drawer.toggle()"><mat-icon>category</mat-icon> Peliculas</a>

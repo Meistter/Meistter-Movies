@@ -32,6 +32,11 @@
   font-size: 1.8vw;
 }
 
+.desktop {
+  display: block;
+  margin: 45px auto;
+  margin-bottom: 0 !important;
+}
 body{  background-color: var(#01111e) !important;}
 
 .contenedorPeliculasySeries {
@@ -44,7 +49,7 @@ body{  background-color: var(#01111e) !important;}
     display: none;
   }
   .main-movies-btn {
-    font-size: 16px;  
+    font-size: 18px;  
     width: 70%;  
     margin: 0;
     margin-top: 30px;
@@ -76,6 +81,8 @@ body{  background-color: var(#01111e) !important;}
  .main-moviesListMobile{
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  /* display: flex;
+  flex-wrap: wrap; */
   margin: 30px;
 }
 

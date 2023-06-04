@@ -20,8 +20,9 @@
     <button class="main-movies-btn" routerLink="/series">Series +</button> 
     <article class="main-moviesList">
       <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
-    </article>
+    </article>    
   </div>
+  <button class="main-movies-btn category-btn desktop">+ Categorias</button>
 </div>
 
 <div class="contenedorMobile">
@@ -29,7 +30,7 @@
     <button  class="main-movies-btn" routerLink="/movies">+ Peliculas</button>
     <article class="main-moviesListMobile">
       <!-- Aqui agregamos las peliculas dinámicamente -->
-      <app-pelicula [movie]="movie" *ngFor="let movie of peliculas"></app-pelicula>
+      <app-pelicula  [movie]="movie" *ngFor="let movie of peliculas"></app-pelicula>
     </article>
    
   </div>

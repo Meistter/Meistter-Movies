@@ -1,10 +1,8 @@
 .home-container {   
     padding-bottom: 48px;   
-    /* height: 100%;  */
    
 }
 .header-background {   
-    /* max-height: 500px; */
     width: 100%;
     object-fit: cover;
     /* filter: blur(3px); */
@@ -15,28 +13,28 @@
 }
 .watch-now {
     position: absolute;
-    /* z-index: 2; */
     left: 60%;
     top: 45%;
     background-color: transparent;
     font-size: 20px;
     font-family: "Lato";
-    border-radius: 26px;
+    border-radius: 28px;
     color: white;
-    height: 55px;
-    width: 120px;
+    min-height: 4vw;
+    min-width: 9vw;    
+    max-height: 55px;
+    max-width: 120px;
     border-style: solid;
     border-color: white;
     box-shadow: 2px 2px 4px black;
     text-shadow: 2px 2px 4px black;
+    
 }
 .movie-title {
     position: absolute;
-    /* z-index: 2; */
     left: 60%;
-    top: 52%;
-    font-size: 5vw;
-    /* font-size: 87px; */
+    top: 50%;
+    font-size: 6vw;
     font-family: "Lato";
     text-shadow: 2px 2px 4px black;
     width: auto;
@@ -46,11 +44,10 @@
 }
 .popular {
     position: absolute;
-    /* z-index: 2; */
     left: 5%;
     bottom: 1%;
-    font-size: 4.5vw;
-    /* font-size: 72px; */
+    font-size: 6vw;
+    width: 100%;
     font-family: "Lato";
     text-shadow: 2px 2px 4px black;
     max-width: 300px;
