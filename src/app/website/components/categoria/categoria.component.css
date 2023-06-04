@@ -7,8 +7,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 6px 6px 7px black;
-  
+  box-shadow: 6px 6px 7px black;  
 }
 .background {
   height: 100%;
@@ -23,7 +22,7 @@
   font-size: 34px;
   color: white;
   text-shadow: 2px 2px 2px black;
-  text-align: center;
+  /* text-align: center; */
   width: 190px;
 }
 @media (width < 496px){

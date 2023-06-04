@@ -44,7 +44,7 @@ body{  background-color: var(#01111e) !important;}
   align-items: center;
   /* justify-content: space-between; */
 }
-@media (max-width: 1050px){
+@media (width < 990px){
   .contenedor{
     display: none;
   }
@@ -71,16 +71,15 @@ body{  background-color: var(#01111e) !important;}
    }
 }
         /* DESDE */
-@media (min-width: 1051px){
+@media (width > 991px){
     .contenedorMobile{
       display: none;
-   }
-   
+   }   
  }
 
  .main-moviesListMobile{
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   /* display: flex;
   flex-wrap: wrap; */
   margin: 30px;
@@ -96,7 +95,7 @@ body{  background-color: var(#01111e) !important;}
     grid-template-columns: auto auto !important;
   }
 }
-@media (max-width: 600px){
+@media (max-width: 500px){
   .main-moviesListMobile{
     grid-template-columns: auto !important;
   }

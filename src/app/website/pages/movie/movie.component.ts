@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from 'src/app/models/caterogias';
 import { Datos, Movie } from 'src/app/models/movie';
@@ -8,7 +8,8 @@ import { environment } from 'src/enviroments/enviroments';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['./movie.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class MovieComponent implements OnInit{
   constructor(private route: ActivatedRoute, private peliculasService: PeliculasService){}

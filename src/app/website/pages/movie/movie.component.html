@@ -5,12 +5,13 @@
 <div class="headerContainer">
   <img  src="{{imgurl}}{{pelicula.backdrop_path}}" alt="">
 </div>
+
 <div class="contenidoContainer">
   <div class="contenido">
-    <div class="titulo">
-      <p>{{pelicula.title}}</p>
+    <div class="titulo-movie">
+      <p style="margin-right: 10px;">{{pelicula.title}}</p>
       <p>{{pelicula.vote_average}}</p>
-
+      
     </div>
     <div class="votos">
       <p>Votos: {{pelicula.vote_count}}</p>
@@ -21,18 +22,20 @@
     <div class="descripcion">
       <p>{{pelicula.overview}}</p>
     </div>
-    <!-- <div *ngIf="generos[0].id"> -->
+   
           <div class="generos">
-            <p>Generos</p>
+            <p>Generos de {{pelicula.title}}</p>
           </div>
           <div class="categorias">
-            <app-categoria style="padding: 15px;" [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
-          <!-- </div> -->
+          <app-categoria style="padding: 15px;" [categoria]="categoria" *ngFor="let categoria of generos" ></app-categoria>
+        
     </div>
   </div>
 </div>
+
 <div *ngIf="peliculas[0].id != -1">
 <p class="relacionadas">Peliculas Relacionadas</p>
+
 <div class="contenedor">
   <app-pelicula [movie]="movie" *ngFor="let movie of peliculas"></app-pelicula>
 </div>

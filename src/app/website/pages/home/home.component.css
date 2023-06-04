@@ -53,3 +53,19 @@
     max-width: 300px;
     margin: 0;
 }
+
+@media (width < 400px){
+    .watch-now {
+    font-size: 5vw !important;
+    }
+    .popular {
+        
+        font-size: 24px !important;
+        
+    }
+ }
+ @media (width < 900px){
+    .movie-title {
+        top: 49% !important;
+    }
+ }

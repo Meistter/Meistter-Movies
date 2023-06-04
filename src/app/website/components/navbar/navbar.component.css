@@ -1,4 +1,4 @@
-::placeholder { color: white; text-shadow: 1px 1px 2px black; }
+::placeholder { color: white; text-shadow: 1px 1px 1px black; }
 .navbar{
   display: flex;
   width: 100%;
@@ -151,15 +151,15 @@ box-shadow: 1px 1px 2px black;
   width: 60%;
   z-index: 999;
 }
-/* HASTA */
-@media (max-width: 1150px)
+
+@media (width < 990px)
         {
             .navbar{
               display: none;
             }
         }
-        /* DESDE */
-@media (min-width: 1151px){
+     
+@media (width > 991px){
           .navbarMobile{
             display: none;
           }
