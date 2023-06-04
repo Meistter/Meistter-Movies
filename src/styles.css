@@ -10,7 +10,7 @@
 }
 
 
-html, body { height: 100% !important; }
+html, body { font-size: 62.5%; height: 100% !important; }
 body
 { margin: 0 !important;
    font-family: Roboto, "Helvetica Neue", sans-serif !important;

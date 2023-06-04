@@ -25,25 +25,20 @@
 </div>
 
 <div class="contenedorMobile">
-  <div class="contenedorPeliculas">
-    <!-- <div class="main-movies-header">
-      <h2 class="main-movies-title">Top Peliculas</h2>
-      <button mat-stroked-button color="white" class="main-movies-btn" routerLink="/movies">Ver
-        más</button>
-    </div> -->
+  <div class="contenedorPeliculas">   
+    <button  class="main-movies-btn" routerLink="/movies">+ Peliculas</button>
     <article class="main-moviesListMobile">
       <!-- Aqui agregamos las peliculas dinámicamente -->
       <app-pelicula [movie]="movie" *ngFor="let movie of peliculas"></app-pelicula>
     </article>
+   
   </div>
-  <div #contenedorSeries>
-    <!-- <div class="main-movies-header">
-      <h2 class="main-movies-title">Top Series</h2>
-      <button mat-stroked-button color="white" class="main-movies-btn" routerLink="/series">Ver
-        más</button>
-    </div> -->
+  <div class="contenedorSeries">   
+    <button class="main-movies-btn" routerLink="/series">+ Series</button> 
     <article class="main-moviesListMobile">
       <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
     </article>
+    <button class="main-movies-btn category-btn">+ Categorias</button>
   </div>
+  
 </div>

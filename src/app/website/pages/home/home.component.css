@@ -19,7 +19,7 @@
     left: 60%;
     top: 45%;
     background-color: transparent;
-    font-size: 22px;
+    font-size: 20px;
     font-family: "Lato";
     border-radius: 26px;
     color: white;
@@ -27,18 +27,21 @@
     width: 120px;
     border-style: solid;
     border-color: white;
-    text-shadow: 1px 1px 2px black;
+    box-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px black;
 }
 .movie-title {
     position: absolute;
     /* z-index: 2; */
     left: 60%;
     top: 52%;
-    font-size: 87px;
+    font-size: 5vw;
+    /* font-size: 87px; */
     font-family: "Lato";
-    text-shadow: 1px 1px 2px black;
-    max-width: 300px;
-    max-height: 300px;
+    text-shadow: 2px 2px 4px black;
+    width: auto;
+    max-height: 100%;
+    overflow: hidden;
     margin: 0;
 }
 .popular {
@@ -46,9 +49,10 @@
     /* z-index: 2; */
     left: 5%;
     bottom: 1%;
-    font-size: 72px;
+    font-size: 4.5vw;
+    /* font-size: 72px; */
     font-family: "Lato";
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 2px 2px 4px black;
     max-width: 300px;
     margin: 0;
 }

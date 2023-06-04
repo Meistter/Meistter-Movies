@@ -1,15 +1,15 @@
 .mainContainer{
-
-  margin: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* margin: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .title{
-  margin: 30px;
+  /* margin: 30px; */
 }
 .serie-container img{
-  width: 100% !important;
-  height: 100% !important;
+  /* margin: 100px; */
+  max-width: 250px;
 }
 body{
   margin: 0;
@@ -17,7 +17,7 @@ body{
   overflow-x: hidden;
   color: white !important;
 }
-@media (max-width: 1300px){
+/* @media (max-width: 1300px){
   .mainContainer{
     grid-template-columns: auto auto auto auto !important;
   }
@@ -36,4 +36,4 @@ body{
   .mainContainer{
     grid-template-columns: auto !important;
   }
-}
+} */

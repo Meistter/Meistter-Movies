@@ -1,16 +1,20 @@
-.mainContainer{
 
-  margin: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.mainContainer{
+  /* margin: 130px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .title{
-  margin: 30px;
+  /* margin-top: 80px; */
+  font-family: "Lato";
 }
+
 .movie-container img{
- margin: 10px;
+ /* margin: 10px; */
+ max-width: 250px;
 }
-@media (max-width: 1300px){
+/* @media (max-width: 1300px){
   .mainContainer{
     grid-template-columns: auto auto auto auto !important;
   }
@@ -29,4 +33,4 @@
   .mainContainer{
     grid-template-columns: auto !important;
   }
-}
+} */

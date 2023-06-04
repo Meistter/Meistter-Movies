@@ -1,15 +1,25 @@
-footer{
-    text-align: center;
-    height: 48px;
-    width: 100%;
+.footer{   
+    height: 58px;
+    width: 100%;    
+    background-color: var(--navBlue); 
     display: flex;
-    justify-content: center;
     align-items: center;
-    bottom: 0;
-    background-color: var(--navBlue);
-    color: white;
-    margin-top: 20px;
-
+    justify-content: center;
+}
+.footerMobile {
+    height: 58px;
+    width: 100%;    
+    background-color: var(--navBlue); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__text {
+  margin-top: 10px;
+  font-size: 1.3vw;
+}
+.footer__text--mobile {
+  font-size: 16px;
 }
 footer a{
  color: rgb(233, 205, 49);

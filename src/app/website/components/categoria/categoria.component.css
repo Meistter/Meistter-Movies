@@ -1,36 +1,36 @@
-.box{
-  position: relative;
-  color: white;
-  border: solid;
-  border-radius: 8px;
-  border-color: var(--navBlue);
-  padding: 8px;
-  font-family: Domine;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  min-width: 118px;
-  justify-content: center;
-  margin-right: 20px;
-}
-.box-cont {
-  
-  margin: 5px;
-  height: 360px;
-  width: 135px;
+.box-cont { 
+  margin: 1px;
+  height: 540px;
+  /* max-height: 400px; */
+  width: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 6px 6px 7px black;
+  
 }
 .background {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  /* filter: blur(4px); */
 }
 .titulo {
   position: absolute;
-  font-family: "Lato";
+  font-family: "Lato";  
+  font-size: 34px;
   color: white;
-
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  width: 190px;
+}
+@media (width < 496px){
+  .box-cont {
+  height: 440px; 
+  width: 135px;  
+  }
+  .titulo {    
+    font-size: 26px;    
+  }
 }

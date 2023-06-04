@@ -1,14 +1,15 @@
 .categoriesContainer{
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ; */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
   display: flex;
   flex-wrap: wrap;
+  
   justify-content: space-between;
   margin: 40px;
   /* margin-top: 30px; */
 }
 .space{
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 
@@ -31,10 +32,5 @@
     grid-template-columns: auto auto  !important;
   }
 }
-@media (max-width: 600px){
-  .categoriesContainer{
-    grid-template-columns: 1fr !important;
-
-  }
-} */
+ */
 

@@ -4,8 +4,8 @@
   <a class="nombre" routerLink="home">meistter</a>
   </div>  
   <form class="searchForm" (submit)="searchQuery($event)">
-      <input class="searchBox" [formControl]="searchField"  placeholder="Series y Peliculas" />
-      <button mat-stroked-button id="searchbtn" class="srchbtn" type="submit">Buscar</button>
+      <input class="searchBox" [formControl]="searchField" placeholder="   Buscar..." />
+      <button id="searchbtn" class="srchbtn" type="submit"><span class="material-symbols-outlined">search</span></button>
       <!-- Aqui estamos enviando el texto de busqueda al TS para ser enviado como query param -->
   </form>
   <div class="navbar-menu">

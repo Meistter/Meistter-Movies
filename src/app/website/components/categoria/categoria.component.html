@@ -5,6 +5,6 @@
 
 <!-- <a class="box" *ngIf="categoria.id !== -1" [routerLink]="['/category', categoria.id]">{{categoria.name}}</a> -->
 <div class="box-cont" *ngIf="categoria.id !== -1" [routerLink]="['/category', categoria.id]">  
-  <img class="background" src="{{backgroundImage}}" alt="">
+  <img class="background" src="{{URL}}{{bgimage}}" alt="">
   <h1 class="titulo">{{categoria.name}}</h1>  
 </div>

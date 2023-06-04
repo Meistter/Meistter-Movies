@@ -1,9 +1,9 @@
-<div class="title">
+<!-- <div class="title">
   <h1>Top Series Trending del Año</h1>
-</div>
+</div> -->
 
 <div class="mainContainer"  infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()" >
-  <app-serie style="margin: 5px;" [serie]="serie" *ngFor="let serie of resultados"></app-serie>
+  <app-serie [serie]="serie" *ngFor="let serie of resultados"></app-serie>
 </div>
 
 
