@@ -13,7 +13,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: grayscale(30%) blur(3px);
+  filter: grayscale(100%) blur(0px);
   /* filter: blur(3px);  */
 }
 .titulo {
@@ -22,7 +22,7 @@
   font-size: 34px;
   color: white;
   text-shadow: 2px 2px 2px black;
-  /* text-align: center; */
+  text-align: center;
   width: 190px;
 }
 @media (width < 496px){

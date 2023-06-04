@@ -36,7 +36,7 @@ const routes: Routes = [
 ];
 
 @NgModule({                                                 //estrategia de carga de modulos
-  imports: [RouterModule.forRoot(routes, {preloadingStrategy: QuicklinkStrategy})],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: QuicklinkStrategy, scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

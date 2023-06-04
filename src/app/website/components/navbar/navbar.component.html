@@ -45,7 +45,7 @@
     </div>
     <mat-nav-list style="display: flex; align-items: center; flex-direction: column">
       <form class="mobileSearchForm" (submit)="searchQuery($event)">
-        <input class="mobileSearchBox" [formControl]="searchField"  placeholder="" />
+        <input class="mobileSearchBox" [formControl]="searchField"  placeholder="Buscar..." />
         <button (click)="drawer.toggle()" id="searchbtn" class="srchbtn--mobile" type="submit"><span class="material-symbols-outlined">search</span></button>
         <!-- <button (click)="drawer.toggle()" id="searchbtn" class="srchbtn" type="submit"></button> -->
       </form>

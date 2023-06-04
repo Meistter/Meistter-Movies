@@ -66,6 +66,11 @@
  }
  @media (width < 900px){
     .movie-title {
-        top: 49% !important;
+        top: 50% !important;
+    }
+ }
+ @media (width <= 375px){
+    .movie-title {
+        top: 51% !important;
     }
  }
