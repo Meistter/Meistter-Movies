@@ -7,7 +7,7 @@ import { environment } from 'src/enviroments/enviroments';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent {
-  URL = environment.IMG_BASE
+  URL = environment.IMG_BASE_ORIGINAL
   @Input() categoria: Categoria ={
     id: 0,
     name: ''
