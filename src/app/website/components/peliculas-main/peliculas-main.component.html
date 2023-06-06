@@ -1,6 +1,6 @@
-<!-- <div class="title">
+<div class="title">
   <h1>Top Peliculas Trending del Año</h1>
-</div> -->
+</div>
 
 <div class="mainContainer" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()">
 <app-pelicula [movie]="movie" *ngFor="let movie of resultados" ></app-pelicula>

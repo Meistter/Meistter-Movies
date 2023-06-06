@@ -5,26 +5,42 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .title{
-  margin: 30px;
+  padding-top: 65px;
+  padding-left: 40px;
+  padding-bottom: 0;
+  font-size: 30px;
 }
+
 
 @media (max-width: 1300px){
   .mainContainer{
     grid-template-columns: auto auto auto auto !important;
+  }
+  .title{   
+    font-size: 30px;
   }
 }
 @media (max-width: 1060px){
   .mainContainer{
     grid-template-columns: auto auto auto !important;
   }
+  .title{   
+    font-size: 28px;
+  }
 }
 @media (max-width: 860px){
   .mainContainer{
     grid-template-columns: auto auto !important;
   }
+  .title{   
+    font-size:24px;
+  }
 }
 @media (max-width: 600px){
   .mainContainer{
     grid-template-columns: auto !important;
+  }
+  .title{   
+    font-size: 18px;
   }
 }

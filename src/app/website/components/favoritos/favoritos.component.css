@@ -3,19 +3,26 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 20px;
+  margin: 30px;
   font-family: Domine;
+  font-size: 22px;
   color: white;
 
 }
 .favoritos-container{
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  /* display: flex;
+  flex-wrap: wrap; */
+  align-items: center;
+  /* justify-content: center; */
   margin: 25px;
+  width: 240px !important;
+  height: auto;
 }
 .movie-container img{
-  width: 240px !important;
-  height: 340px !important;
+  width: 260px !important;
+  height: 360px !important;
   border-style: solid !important;
   border-width: 1px !important;
   border-color: red !important;
