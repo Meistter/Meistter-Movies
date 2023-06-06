@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Datos, Movie } from 'src/app/models/movie';
 import { SeriesService } from 'src/app/services/series.service';
@@ -6,7 +6,8 @@ import { environment } from 'src/enviroments/enviroments';
 @Component({
   selector: 'app-seriep',
   templateUrl: './seriep.component.html',
-  styleUrls: ['./seriep.component.css']
+  styleUrls: ['./seriep.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SeriepComponent {
   constructor(private route: ActivatedRoute, private seriesService: SeriesService){}
