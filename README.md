@@ -11,7 +11,6 @@ Aplicación web desarrollada en Angular 15+. Esta Aplicación consume la API de 
 -Interceptores
 -Manejo de Reactive Forms
 -Manejo de tokens
--Optimización de tiempo de respuesta
 -Skeleton loading
 -QuicklinkStrategy
 
