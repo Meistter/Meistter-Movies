@@ -12,13 +12,6 @@ export class CategoriaComponent {
     id: 0,
     name: ''
   }
-  @Input() bgimage = ''
-  
-  ngOnInit(): void{
-  
-    console.log('esto es en categoria',this.bgimage);
-   
-    
-    
-  }
+  @Input() bgimage = ''  
+ 
 }
