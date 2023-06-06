@@ -31,6 +31,10 @@
   min-width: 200px;
   margin-right: 40px;
   margin-left: 40px;
+  box-shadow: 16px 16px 12px black;
+}
+.sombra img{
+  box-shadow: 5px 5px 5px black;
 }
 
 .contenido{
@@ -81,9 +85,9 @@
   margin-top: 10px;
 }
 .contenedor{
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 05px;
+  /* width: 100%; */
+  margin: 30px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
 

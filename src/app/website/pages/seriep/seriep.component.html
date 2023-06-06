@@ -3,7 +3,7 @@
 </div>
 
 <div class="headerContainer">
-  <img  src="{{imgurl}}{{serie.poster_path}}" alt="">
+  <img  src="{{imgurl}}{{serie.backdrop_path}}" alt="">
 </div>
 <div class="contenidoContainer">
   <div class="contenido">
@@ -31,6 +31,6 @@
 <div *ngIf="series[0].id != -1">
 <p class="relacionadas">Series Relacionadas</p>
 <div class="contenedor" >
-  <app-serie [serie]="serie" *ngFor="let serie of series"></app-serie>
+  <app-serie class="sombra" [serie]="serie" *ngFor="let serie of series"></app-serie>
 </div>
 </div>
